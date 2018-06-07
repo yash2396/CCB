@@ -1,0 +1,33 @@
+dlib
+imutils
+# index.py
+flask
+flask-mysql
+
+# bot.py
+nltk
+numpy
+tensorflow
+tflearn
+
+# TTS
+gTTS
+# sudo apt-get install flite
+
+# others
+h5py
+Scipy
+
+# translate
+hyper
+googletrans
+
+# Face detection
+opencv-python
+
+# Browser
+selenium
+
+# GMail API
+google-api-python-client
+httplib2

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="960px" viewBox="0 0 1280 960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>theme_desktop_single_default</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1280" height="960"></rect>
+    </defs>
+    <g id="Themes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="theme_desktop_single">
+            <g id="theme_desktop_single_default">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="screen" mask="url(#mask-2)">
+                    <g transform="translate(-44.000000, -197.000000)">
+                        <path d="M516,1445 C664.012313,1445 784,1325.01231 784,1177 C784,1028.98769 664.012313,909 516,909 C367.987687,909 248,1028.98769 248,1177 C248,1325.01231 367.987687,1445 516,1445 Z" id="Oval-15-Copy" fill="#ECEFF1" opacity="0.25"></path>
+                        <path d="M220,871 C247.614237,871 270,848.614237 270,821 C270,793.385763 247.614237,771 220,771 C192.385763,771 170,793.385763 170,821 C170,848.614237 192.385763,871 220,871 Z" id="Oval-15-Copy-2" fill="#ECEFF1" opacity="0.300000012"></path>
+                        <path d="M820,1027 C842.09139,1027 860,1009.09139 860,987 C860,964.90861 842.09139,947 820,947 C797.90861,947 780,964.90861 780,987 C780,1009.09139 797.90861,1027 820,1027 Z" id="Oval-15" fill="#ECEFF1" opacity="0.300000012"></path>
+                        <path d="M158,949 C245.26099,949 316,878.26099 316,791 C316,703.73901 245.26099,633 158,633 C70.7390095,633 0,703.73901 0,791 C0,878.26099 70.7390095,949 158,949 Z" id="Oval-15-Copy-3" fill="#ECEFF1" opacity="0.25"></path>
+                        <g id="Group-2" stroke-width="1" fill="none" transform="translate(546.000000, 0.000000)">
+                            <path d="M437,658 C618.701683,658 766,510.701683 766,329 C766,147.298317 618.701683,0 437,0 C255.298317,0 108,147.298317 108,329 C108,510.701683 255.298317,658 437,658 Z" id="Oval-15" fill="#ECEFF1" opacity="0.300000012"></path>
+                            <path d="M108,404 C167.646753,404 216,355.646753 216,296 C216,236.353247 167.646753,188 108,188 C48.353247,188 0,236.353247 0,296 C0,355.646753 48.353247,404 108,404 Z" id="Oval-15" fill="#ECEFF1" opacity="0.25"></path>
+                            <path d="M673,816 C782.904665,816 872,726.904665 872,617 C872,507.095335 782.904665,418 673,418 C563.095335,418 474,507.095335 474,617 C474,726.904665 563.095335,816 673,816 Z" id="Oval-15" fill="#ECEFF1" opacity="0.300000012"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

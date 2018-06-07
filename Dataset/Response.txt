@@ -1,0 +1,59 @@
+PY_Seats
+There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Physiotherapy Department.
+
+PY_shifts
+There are #shifts# in Physiotherapy Department. Timings are same.
+
+PY_Placement
+In our college, the last year placement percentage is #Placement# in Physiotherapy department.
+
+PY_Companies
+Last year #Companies# companies for Physiotherapy engineers around the India visited our college campus.
+
+PY_Package
+The average on-campus salary package for Physiotherapy Engineers is #Package#.
+
+PY_Staffs
+In Physiotherapy department, there are #Staffs# faculties.
+
+PY_Labs
+There are #Labs# labs in Physiotherapy department of our college.
+
+PY_Instruments
+In Physiotherapy department, we have around #Instruments# instruments per lab.
+
+PY_Lab_Facility
+We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our Physiotherapy Department.
+
+PY_Schedule
+Daily schedule for Physiotherapy is #Schedule#.
+
+PY_Classes
+There are #Classes# classes for each year batch in Physiotherapy department.
+
+PY_Students_Class
+In Physiotherapy department, #Students_Class# per class is allowed.
+
+PY_Extra_Activities
+We organize Workshops, Expert Lectures, seminars and site visits for Physiotherapy students.
+
+PY_Syllabus
+The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#
+
+PY_Abroad
+For Physiotherapy Engineers, We had abroad studies in #Abroad#.
+
+PY_BG_Ratio
+In Physiotherapy department, the girl boy ratio is #BG_Ratio#.
+
+CSE_Scope
+The scope of Civil department is #Scope#.
+
+CSE_Cutoff
+The last year cutoff ranking in Civil department is #Cutoff#.
+
+CSE_D2D
+In Civil department, the total D2D seats are #D2D_Seats#.
+
+EE_VS_EC
+

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/abhishek/Documents/buddha/Bot/bot_files/BBmodel.tflearn"
+all_model_checkpoint_paths: "/home/abhishek/Documents/buddha/Bot/bot_files/BBmodel.tflearn"

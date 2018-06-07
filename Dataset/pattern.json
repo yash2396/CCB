@@ -1,0 +1,108 @@
+"seats Electrical engineering?", "Seat Electrical Engineering?", "seats Electrical department", "seat Electrical department",
+                  "seats Electrical","seat Electrical", "CSE seats", "Seat EE", "seats ACPC Electrical engineering", "seat ACPC Electrical engineering",
+                  "seats ACPC Electrical department", "seat ACPC Electrical department", "seats ACPC Electrical", "seat ACPC Electrical",
+                  "seats ACPC EE", "seat ACPC EE", "MQ Seats Electrical Engineering", "MQ Seat Electrical Engineering",
+                  "MQ Seats Electrical department", "MQ Seat Electrical department", "seats MQ Electrical", "seat MQ Electrical",
+                  "seats MQ EE", "seat MQ EE", "seats management quota Electrical engineering", "seats management quota Electrical engineering", 
+                  "seats management quota Electrical department", "seat management quota Electrical department", "seats management quota Electrical", 
+                  "seats management quota Electrical", "seats management quota EE", "seats management quota EE",
+                  "seats management Electrical engineering", "seats management Electrical engineering", "seats management Electrical department", 
+                  "seat management Electrical department", "seats management Electrical", "seats management Electrical", "seats management EE", 
+                  "seats management EE", "ACPC Management Quota seats Electrical engineering", "ACPC Management Quota seat Electrical engineering",
+                  "ACPC Management Quota seats Electrical department", "ACPC Management Quota seat Electrical department", 
+                  "ACPC Management Quota seats Electrical", "ACPC Management Quota seat Electrical", "ACPC Management Quota seats EE", "ACPC Management Quota seat EE"
+
+"shifts Electrical engineering?", "shift Electrical engineering?", "shifts Electrical department?", "shift Electrical department?", 
+                  "shifts Electrical", "shift Electrical", "shifts EE", "shift EE"
+
+"placements Electrical Engineering", "placement Electrical Engineering", "placements Electrical department", "placement Electrical department", 
+                  "placements Electrical", "placement Electrical",  "placements EE", "placement EE", "recruitment Electrical Engineering", "recruitment Electrical department",
+                  "recruitment Electrical", "recruitment EE", "placed Electrical Engineering", "placed Electrical department", 
+                  "placed Electrical", "placed EE",  "jobs Electrical Engineering", "job Electrical Engineering", "jobs Electrical department", "job Electrical department",
+                  "jobs Electrical", "job Electrical", "jobs EE", "job EE" 
+
+"companies Electrical engineering", "company Electrical engineering", "companies Electrical department", "company Electrical department",
+                  "companies Electrical", "company Electrical", "companies EE", "company EE", "companies hire Electrical engineering", 
+                  "company hire Electrical engineering", "companies hire Electrical department", "company hire Electrical department",
+                  "companies hire Electrical", "company hire Electrical", "companies hire EE", "company hire EE"
+
+"salaries Electrical Engineering", "salary Electrical Engineering", "salaries Electrical department", "salary Electrical department", 
+                  "salaries Electrical", "salary Electrical",  "salaries EE", "salary EE", "packages Electrical Engineering", "package Electrical Engineering",
+                  "packages Electrical department", "package Electrical department", "packages Electrical", "package Electrical", "packages EE", "package EE" 
+
+"faculties Electrical Engineering", "faculty Electrical Engineering", "faculties Electrical department", "faculty Electrical department", 
+                  "faculties Electrical", "faculty Electrical", "faculties EE", "faculty EE", "teachers Electrical Engineering", "teacher Electrical Engineering",
+                  "teachers Electrical department", "teacher Electrical department", "teachers Electrical", "teacher Electrical",
+                  "teachers EE", "teacher EE", "Staffs Electrical Engineering", "Staff Electrical Engineering",
+                  "Staffs Electrical department", "Staff Electrical department", "Staffs Electrical", "Staff Electrical", "Staffs EE", "Staff EE" 
+
+"Number labs Electrical Engineering", "Number lab Electrical Engineering", "Number labs Electrical department", "Number lab Electrical department", 
+                  "Number labs Electrical", "Number lab Electrical",  "Number labs EE", "Number lab EE", "labs Electrical Engineering", "lab Electrical Engineering",
+                  "labs Electrical department", "lab Electrical department", "labs Electrical", "lab Electrical", "labs EE", "lab EE",
+                  "workshops Electrical Engineering", "workshop Electrical Engineering", "workshops Electrical department", "workshop Electrical department",
+                  "workshops Electrical", "workshop Electrical", "workshops EE", "workshop EE" 
+
+"instruments Electrical Engineering", "instrument Electrical Engineering", "instruments Electrical Department", "instrument Electrical Department",
+                  "instruments Electrical", "instrument Electrical", "instruments EE", "instrument EE" 
+
+"lab facilities Electrical engineering", "lab facility Electrical engineering", "lab facilities Electrical department", "Lab facility Electrical department",
+                  "lab facilities Electrical", "Lab facility Electrical", "lab facilities EE", "Lab facility EE" 
+
+"lectures lab day Electrical engineering", "lecture lab day Electrical engineering", "lectures lab day Electrical department", "lecture lab day Electrical department",
+                  "lectures lab day Electrical", "lecture lab day Electrical", "lectures lab day EE", "lecture lab day EE",
+                  "lectures daily Electrical engineering", "lecture daily Electrical engineering", "lectures daily Electrical department", "lecture daily Electrical department",
+                  "lectures daily Electrical", "lecture daily Electrical", "lectures daily EE", "lecture daily EE",
+                  "lectures lab daily Electrical engineering", "lecture lab daily Electrical engineering", "lectures lab daily Electrical department", "lecture lab daily Electrical department",
+                  "lectures lab daily Electrical", "lecture lab daily Electrical",  "lectures lab daily EE", "lecture lab daily Electrical",
+                  "Class schedule Electrical Engineering", "Class schedule Electrical department", "Class schedule Electrical", "Class schedule EE",
+                  "routine table Electrical engineering", "routine table Electrical department", "routine table Electrical", "routine table EE"
+
+"classes Electrical engineering", "class Electrical engineering", "classes Electrical department", "class Electrical department",
+                  "classes Electrical", "class Electrical", "classes EE", "class EE", "divisions Electrical engineering", "division Electrical engineering",
+                  "divisions Electrical department", "division Electrical department", "divisions Electrical", "division Electrical",
+                  "divisions EE", "division EE", "Classrooms Electrical engineering", "Classroom Electrical engineering",
+                  "Classrooms Electrical department", "Classroom Electrical department", "Classrooms Electrical", "Classroom Electrical", "Classrooms EE", "Classroom EE"
+
+"class strengths Electrical Engineering", "class strength Electrical Engineering", "class strengths Electrical department", "class strength Electrical department",
+                  "class strengths Electrical", "class strength Electrical", "class strengths EE", "class strength EE",
+                  "Students per class Electrical Engineering", "Student per class Electrical Engineering", "Students per class Electrical department", 
+                  "Student per class Electrical department", "Students per class Electrical", "Student per class Electrical",
+                  "Students per class EE", "Student per class EE"
+
+"co-curricular activities Electrical Engineering", "co-curricular activity Electrical Engineering", 
+                  "co-curricular activities Electrical department", "co-curricular activity Electrical department",
+                  "co-curricular activities Electrical", "co-curricular activity Electrical", "co-curricular activities EE", "co-curricular activity EE",
+                  "extra curricular activities Electrical Engineering", "extra curricular activity Electrical Engineering", 
+                  "extra curricular activities Electrical department", "extra curricular activity Electrical department", 
+                  "extra curricular activities Electrical", "extra curricular activity Electrical", "extra curricular activities EE", "extra curricular activity EE", 
+                  "Activities Electrical engineering", "Activity Electrical engineering", "Activities Electrical department", "Activity Electrical department",
+                  "Activities Electrical", "Activity Electrical", "Activities EE", "Activity EE" 
+
+"syllabus Electrical engineering?", "Syllabus Electrical department", "Syllabus Electrical","Syllabus EE",
+                  "course Electrical engineering", "course Electrical department", "course Electrical", "course EE"
+
+"abroad colleges Electrical engineering", "abroad college Electrical engineering", "abroad colleges Electrical department", "abroad college Electrical department",
+                  "abroad colleges Electrical department", "abroad college Electrical department", "abroad colleges Electrical", "abroad college Electrical",
+                  "abroad colleges EE", "abroad college EE", "foreign universities Electrical engineering", "foreign university Electrical engineering",
+                  "foreign universities Electrical department", "foreign university Electrical department", "foreign universities Electrical", "foreign university Electrical",
+                  "foreign universities EE", "foreign university EE", "studies abroad Electrical engineering", "study abroad Electrical engineering", 
+                  "studies abroad Electrical department", "study abroad Electrical department", "studies abroad Electrical", "study abroad Electrical", 
+                  "studies abroad EE", "study abroad EE",  "Electrical Engineering foreign colleges", "Electrical Engineering foreign college",
+                  "Electrical department foreign colleges", "Electrical department foreign college", "Electrical foreign colleges", "Electrical foreign college",
+                  "CE foreign colleges", "CE foreign college",  "International Universities Electrical engineering", 
+                  "International Universities Electrical department", "International Universities Electrical", "International Universities EE"
+
+"Sex ratio Electrical engineering", "Sex ratio Electrical department", "Sex ratio Electrical", "Sex ratio EE",
+                  "boys girls Electrical engineering", "boys girls Electrical department", "boys girls Electrical", "boys girls EE",
+                  "Girl Boy ratio Electrical engineering", "Girl Boy ratio Electrical department", "Girl Boy ratio Electrical", "Girl Boy ratio EE"
+
+"scope Electrical Engineering", "scope Electrical department", "scope Electrical", "scope EE", 
+                  "Future scope Electrical Engineering", "Future scope Electrical department", "Future scope Electrical", "Future scope EE"
+
+"Cutoff Electrical engineering", "Cutoff Electrical department", "Cutoff Electrical", "Cutoff EE", 
+                  "ranking Electrical engineering", "ranking Electrical department", "ranking Electrical", "ranking EE"
+
+"D2D seats Electrical engineering", "D2D seat Electrical engineering", "D2D seats Electrical department", "D2D seat Electrical department",
+                  "D2D seats Electrical", "D2D seat Electrical", "D2D seats EE", "D2D seat EE",
+                  "seats diploma Electrical engineering", "seat diploma Electrical engineering", "seats diploma Electrical department", "seat diploma Electrical department",
+                  "seats diploma Electrical", "seat diploma Electrical", "seats diploma EE", "seat diploma EE" 

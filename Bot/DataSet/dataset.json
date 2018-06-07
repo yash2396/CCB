@@ -1,0 +1,1481 @@
+{"intents": [
+
+    {"tag": "Seats",
+     "patterns": ["seats", "Seat", "seats ACPC", "seat ACPC", "MQ Seats", "MQ Seat", "seats management quota", "seats management quota",
+                  "seats management", "seat management", "ACPC Management Quota seats", "ACPC Management Quota seat"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in * Department."],
+     "context": "General"
+    },
+
+    {"tag": "shifts",
+     "patterns": ["shifts", "shift"],
+     "responses": ["There are #shifts# in * Department. Timings are same."],
+     "context": "General"
+    },
+
+    {"tag": "Placement",
+     "patterns": ["placements", "placement", "recruitment", "placed", "jobs", "job"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in * department."],
+     "context": "General"
+    },
+
+    {"tag": "Companies",
+     "patterns": ["companies", "company", "companies hire", "company hire"],
+     "responses": ["Last year #Companies# companies for * around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "General"
+    },
+
+    {"tag": "Package",
+     "patterns": ["salaries", "salary", "packages", "package"],
+     "responses": ["The average on-campus salary package for * is #Package#."],
+     "context": "General"
+    },
+
+    {"tag": "Staffs",
+     "patterns": ["faculties", "faculty", "teachers", "teacher", "Staffs", "Staff"],
+     "responses": ["In * department, there are #Staffs# faculties."],
+     "context": "General"
+    },
+
+    {"tag": "Labs",
+     "patterns": ["Number labs", "Number laboratories", "Number lab", "Number laboratory", "labs", "lab", "laboratories", "laboratory", "workshops", "workshop"],
+     "responses": ["There are #Labs# labs in * department of our college."],
+     "context": "General"
+    },
+
+    {"tag": "Instruments",
+     "patterns": ["instruments", "instrument", "equipments", "equipment"],
+     "responses": ["In * department, we have around #Instruments# instruments per lab."],
+     "context": "General"
+    },
+
+    {"tag": "Lab_Facility",
+     "patterns": ["lab facilities", "lab facility"],
+     "responses": ["We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our * Department."],
+     "context": "General"
+    },
+
+    {"tag": "Schedule",
+     "patterns": ["lectures lab day", "lecture lab day", "lectures daily", "lecture daily", "lectures lab daily", "lecture lab daily",
+                  "Class schedule", "routine table"],
+     "responses": ["Daily schedule for * is #Schedule#."],
+     "context": "General"
+    },
+
+    {"tag": "Classes",
+     "patterns": ["classes", "class", "divisions", "division", "Classrooms", "Classroom"],
+     "responses": ["There are #Classes# classes for each year batch in * department."],
+     "context": "General"
+    },
+
+    {"tag": "Students_Class",
+     "patterns": ["class strengths", "class strength", "Students per class", "Student per class"],
+     "responses": ["In * department, #Students_Class# per class is allowed."],
+     "context": "General"
+    },
+
+    {"tag": "Extra_Activities",
+     "patterns": ["co-curricular activities", "co-curricular activity", "extra curricular activities", "extra curricular activity",
+                  "Activities", "Activity"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for * students."],
+     "context": "General"
+    },
+
+    {"tag": "Syllabus",
+     "patterns": ["syllabus", "courses", "course"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "General"
+    },
+
+    {"tag": "Abroad",
+     "patterns": ["abroad colleges", "abroad college", "foreign universities", "foreign university", "studies abroad", "study abroad",
+                  "foreign colleges", "foreign college", "International Universities"],
+     "responses": ["For *, We had abroad studies in #Abroad#."],
+     "context": "General"
+    },
+
+    {"tag": "BG_Ratio",
+     "patterns": ["Sex ratio", "boys girls", "Girl Boy ratio"],
+     "responses": ["In * department, the girl boy ratio is #BG_Ratio#."],
+     "context": "General"
+    },
+
+    {"tag": "Scope",
+     "patterns": ["scope", "Future scope"],
+     "responses": ["The scope of * department is #Scope#."],
+     "context": "General"
+    },
+
+    {"tag": "Cutoff",
+     "patterns": ["Cutoff", "ranking", "rank", "merit", "merits", "ranks"],
+     "responses": ["The last year cutoff ranking in * department is #Cutoff#."],
+     "context": "General"
+    },
+
+    {"tag": "Fees",
+     "patterns": ["fees", "pay tuition"],
+     "responses": ["The tuition fees for * is #Fees#. For more information about MQ fees contact administration. Person named #contact_name#."],
+     "context": "General"
+    },
+
+    {"tag": "Timing",
+     "patterns": ["Timing", "duration Timings", "Regular timings", "Time slot", "time", "start time", "end time"],
+     "responses": ["The timing for * is #Timing#."],
+     "context": "General"
+    },
+
+    {"tag": "D2D",
+     "patterns": ["D2D seats", "D2D seat", "seats diploma", "seat diploma"],
+     "responses": ["In *, the total D2D seats are #D2D_Seats#."],
+     "context": "General"
+    },
+
+    {"tag": "master_program",
+     "patterns": ["Master", "Master degree", "Master program"],
+     "responses": ["In *, #Master#"],
+     "context": "General"
+    },
+
+    {"tag": "University",
+     "patterns": ["university college", "university affiliated", "college affiliated"],
+     "responses": ["Our * institute is affiliated by #University#."],
+     "context": "General"
+    },
+
+    {"tag": "Result",
+     "patterns": ["result", "results", "grade", "grades"],
+     "responses": ["In * department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "General"
+    },
+
+    {"tag": "College_site",
+     "patterns": ["college site", "college website", "bits site", "bits website", "babaria site", "babaria website"],
+     "responses": ["Our website is #College_site# ."],
+     "context": "Administration"
+    },
+
+    {"tag": "ACPC_site",
+     "patterns": ["ACPC site", "ACPC website", "admission site", "admission website"],
+     "responses": ["Admission website is #ACPC_site# ."],
+     "context": "Administration"
+    },
+
+    {"tag": "Engineering_Fees",
+     "patterns": ["engineering fees", "engineering pay tuition", "computer fees", "cse fees", "computer pay tuition", "CSE pay tuition",
+                  "fees ACPC", "ACPC pay tuition", "fees MQ student", "fees Management", "MQ pay tuition", "Management pay tuition",
+                  "civil fees", "ce Fees", "civil pay tuition", "CE pay tuition", "mechanical fees", "ME fees", "mechanical pay tuition", "ME pay tuition",
+                  "EC fees", "Electronic communication fees", "electronic pay tuition", "EC pay tuition",
+                  "electrical fees", "electrical pay tuition", "ee fees", "EE pay tuition"],
+     "responses": ["The tuition fees for Engineering is #Fees#. For more information about MQ fees contact administration. Person named #contact_name#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Engineering_Timing",
+     "patterns": ["Timing Engineering", "duration Timings Engineering", "Regular timings Engineering", "Time slot Engineering", "time engineering", "start time engineering", "end time engineering"],
+     "responses": ["The timing for Engineering is #Timing#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Security_deposit",
+     "patterns": ["pay security deposit", "amount security deposit pay", "sum security deposit", "security deposit pay"],
+     "responses": ["The security deposit is #Security_deposit#."],
+     "context": "Administration"
+    },
+
+    {"tag": "College_placement",
+     "patterns": ["percent placement college", "percentage placement college"],
+     "responses": ["The overall placement from our college is #College_placement#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Library",
+     "patterns": ["library facility", "library", "books", "books library"],
+     "responses": ["We have world-class library infrastructure. All the student can access library. The student can issue 3 books at a time for 10 days."],
+     "context": "Administration"
+    },
+
+    {"tag": "Engineering_University",
+     "patterns": ["engineering university college", "engineering university affiliated", "engineering college affiliated"],
+     "responses": ["Our engineering institute is affiliated by #University#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Break_timing",
+     "patterns": ["Timing lunch break", "timing lunch", "time lunch break", "time break", "timing break"],
+     "responses": ["For 1st year students, lunch break timing is #Break_timing#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Security",
+     "patterns": ["Security facility", "Security service", "Security"],
+     "responses": ["We have advance Security facility. All the campus is monitor with CCTVs and Security guards."],
+     "context": "Administration"
+    },
+
+    {"tag": "Campus_facility",
+     "patterns": ["campus facility", "campus facilities", "internet facility", "internet facilities", "cctv facility", "cctv facilities"],
+     "responses": ["#Campus_facility#"],
+     "context": "Administration"
+    },
+
+    {"tag": "Bus",
+     "patterns": ["bus facility", "bus facilities", "bus service", "bus", "transport", "transportation", "transportation facility", "transportation facilities", "transportation service"],
+     "responses": ["We have transportation facility. #bus_details# For more information about bus routes, contact Transport Office."],
+     "context": "Administration"
+    },
+
+    {"tag": "hostel",
+     "patterns": ["hostel facility", "hostel facilities", "hostel service", "hostel"],
+     "responses": ["We have hostel facility for both boys and girls separate. #hostel_details#"],
+     "context": "Administration"
+    },
+
+    {"tag": "rooms_boys_hostel",
+     "patterns": ["rooms boys hostel", "Number rooms boys hostel"],
+     "responses": ["There are #rooms_boys_hostel# rooms in boys hostel."],
+     "context": "Administration"
+    },
+
+    {"tag": "rooms_girls_hostel",
+     "patterns": ["rooms girls hostel", "Number rooms girls hostel"],
+     "responses": ["There are #rooms_girls_hostel# rooms in girls hostel."],
+     "context": "Administration"
+    },
+
+    {"tag": "TFW_Students",
+     "patterns": ["seats TFW", "TFW student", "TFW", "Tuition Fees Waiver"],
+     "responses": ["Tuition Fee Waiver is available for #TFW_Students# students per Class. And it is selected by ACPC."],
+     "context": "Administration"
+    },
+
+    {"tag": "Scholarship",
+     "patterns": ["Scholarship", "Scholarships", "fees waiver", "financial support", "Education Aid"],
+     "responses": ["We have varies Scholarship programmes. #Scholarship#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Achievements",
+     "patterns": ["Achievements", "Achievement", "milestone", "milestones", "Success"],
+     "responses": ["We have many achievements in university. #Achievements#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Internship",
+     "patterns": ["Internship", "Internships", "engineering training", "engineering industrial training"],
+     "responses": ["We have many internship programmes. #Internship#."],
+     "context": "Administration"
+    },
+
+    {"tag": "Mobile_ban",
+     "patterns": ["mobile ban", "mobile phone ban", "mobile banned", "mobile phone banned", "mobile prohibited", "mobile phone prohibited",
+                  "cell phone ban", "cell phone banned", "cell phone prohibited", "mobile allow", "mobile phone allow", "cell phone allow"],
+     "responses": ["#Mobile_ban#."],
+     "context": "Administration"
+    },
+
+    {"tag": "CSE_Seats",
+     "patterns": ["seats Computer", "seat Computer", "seats Computer science", "seat Computer science", "CSE seats", "Seat CSE",
+                  "seats ACPC Computer", "seat ACPC Computer", "seats ACPC Computer science", "seat ACPC Computer science",
+                  "seats ACPC CSE", "seat ACPC CSE", "seats MQ Computer", "seat MQ Computer", "seats MQ Computer science", "seat MQ Computer science", "seats MQ CSE", "seat MQ CSE",
+                  "seats management quota Computer", "seats management quota Computer", "seats management quota CSE", "seats management CSE",
+                  "seats management quota CSE", "seats management Computer", "seats management Computer", "seats management Computer science", "seats management Computer science",
+                  "seats management CSE", "ACPC Management Quota seats Computer", "ACPC Management Quota seat Computer", "ACPC Management Quota seats CSE", "ACPC Management Quota seat CSE"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Computer Engineering Department."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_shifts",
+     "patterns": ["shifts Computer", "shift Computer", "shifts Computer science", "shift Computer science", "shifts CSE", "shift CSE"],
+     "responses": ["There are #shifts# in Computer Engineering Department. Timings are same."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Placement",
+     "patterns": ["placements Computer", "placement Computer", "placements Computerscience", "placement Computerscience",  "placements CSE", "placement CSE", "recruitment Computer",
+                  "recruitment Computer science", "recruitment CSE", "placed Computer", "placed Computer science", "placed CSE",  "jobs Computer", "job Computer",
+                  "jobs Computer science", "job Computer science", "jobs CSE", "job CSE"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Computer Engineering department."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Companies",
+     "patterns": ["companies Computer", "company Computer", "companies Computer science", "company Computer science", "companies CSE", "company CSE",
+                  "companies hire Computer", "company hire Computer", "companies hire Computer science", "company hire Computer science", "companies hire CSE", "company hire CSE"],
+     "responses": ["Last year #Companies# companies for Computer engineers around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Package",
+     "patterns": ["salaries Computer", "salary Computer", "salaries Computer science", "salary Computer science", "salaries CSE", "salary CSE",
+                  "packages Computer", "package Computer", "packages Computer science", "package Computer science", "packages CSE", "package CSE"],
+     "responses": ["The average on-campus salary package for Computer Engineers is #Package#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Staffs",
+     "patterns": ["faculties Computer", "faculty Computer", "faculties Computer science", "faculty Computer science", "faculties CSE", "faculty CSE",
+                  "teachers Computer", "teacher Computer", "teachers Computer science", "teacher Computer science", "teachers CSE", "teacher CSE",
+                  "Staffs Computer", "Staff Computer", "Staffs Computer science", "Staff Computer science", "Staffs CSE", "Staff CSE"],
+     "responses": ["In Computer department, there are #Staffs# faculties."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Labs",
+     "patterns": ["Number labs Computer", "Number lab Computer",  "Number labs Computer science", "Number lab Computer science", "Number labs CSE", "Number lab CSE",
+                  "Number laboratories Computer", "Number laboratory Computer",  "Number laboratories Computer science", "Number laboratory Computer science",
+                  "Number laboratories CSE", "Number laboratory CSE", "labs Computer", "lab Computer", "labs Computer science", "lab Computer science", "labs CSE", "lab CSE",
+                  "laboratories Computer", "laboratory Computer", "laboratories Computer science", "laboratory Computer science", "laboratories CSE", "laboratory CSE",
+                  "workshops Computer", "workshop Computer", "workshops Computer science", "workshop Computer science", "workshops CSE", "workshop CSE" ],
+     "responses": ["There are #Labs# labs in Computer department of our college."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Instruments",
+     "patterns": ["instruments Computer", "instrument Computer", "instruments Computer science", "instrument Computer science", "instruments CSE", "instrument CSE",
+                  "PC CSE", "PCs CSE", "computers CSE", "equipments Computer", "equipments Computer", "equipments Computer science", "equipments Computer science",
+                  "equipments CSE", "equipments CSE", "computer computer", "computers computer", "computer cse", "computer computer science", "computers computer science" ],
+     "responses": ["In Computer department, we have around #Instruments# computers per lab."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Lab_Facility",
+     "patterns": ["lab facilities Computer", "Lab facility Computer", "lab facilities Computer science", "Lab facility Computer science", "lab facilities CSE", "Lab facility CSE" ],
+     "responses": ["We have 2 CCTVs in each lab with centralized AC and much more facilities in Our Computer Engineering Department."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Schedule",
+     "patterns": ["lectures lab day Computer", "lecture lab day Computer", "lectures lab day Computer science", "lecture lab day Computer science", "lectures lab day CSE", "lecture lab day CSE",
+                  "lectures daily Computer", "lecture daily Computer", "lectures daily Computer science", "lecture daily Computer science", "lectures daily CSE", "lecture daily CSE",
+                  "lectures lab daily Computer", "lecture lab daily Computer", "lectures lab daily Computer science", "lecture lab daily Computer science", "lectures lab daily CSE", "lecture lab daily CSE",
+                  "Class schedule Computer", "Class schedule Computer science", "Class schedule CSE", "routine table Computer", "routine table Computer science", "routine table CSE"],
+     "responses": ["Daily schedule for Computer engineering is #Schedule#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Classes",
+     "patterns": ["classes Computer", "class Computer", "classes Computer science", "class Computer science", "classes CSE", "class CSE", "divisions Computer", "division Computer",
+                  "divisions Computer science", "division Computer science", "divisions CSE", "division CSE", "Classrooms Computer", "Classroom Computer",
+                  "Classrooms Computer science", "Classroom Computer science", "Classrooms CSE", "Classroom CSE"],
+     "responses": ["There are #Classes# classes for each year batch in Computer engineering department."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Students_Class",
+     "patterns": ["class strengths Computer", "class strength Computer", "class strengths Computer science", "class strength Computer science", "class strengths CSE", "class strength CSE",
+                  "Students per class Computer", "Student per class Computer", "Students per class Computer science", "Student per class Computer science", "Students per class CSE", "Student per class CSE"],
+     "responses": ["In computer department, #Students_Class# per class is allowed."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Extra_Activities",
+     "patterns": ["co-curricular activities Computer", "co-curricular activity Computer", "co-curricular activities Computer science", "co-curricular activity Computer science",
+                  "co-curricular activities CSE", "co-curricular activity CSE", "extra curricular activities Computer", "extra curricular activity Computer",
+                  "extra curricular activities Computer science", "extra curricular activity Computer science", "extra curricular activities CSE", "extra curricular activity CSE",
+                  "Activities Computer", "Activity Computer", "Activities Computer science", "Activity Computer science", "Activities CSE", "Activity CSE"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars, club activities and industrial visits for Computer Engineering students."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Syllabus",
+     "patterns": ["Syllabus Computer", "Syllabus Computer science", "Syllabus CSE", "course Computer", "course Computer science", "course CSE"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_VS_CE",
+     "patterns": ["difference between CE and CSE", "CE and CSE different",
+                  "difference between Computer Engineering and Computer Science", "Computer Engineering and Computer Science different"],
+     "responses": ["Since 2013, CSE is there and after 2014 GTU states that both are same with only difference of 2-3 subjects. And now only CE is there in GTU."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Abroad",
+     "patterns": ["abroad colleges Computer", "abroad college Computer", "abroad colleges Computer science", "abroad college Computer science", "abroad colleges CSE", "abroad college CSE",
+                  "foreign universities Computer", "foreign university Computer", "foreign universities Computer science", "foreign university Computer science", "foreign universities CSE", "foreign university CSE",
+                  "studies abroad Computer", "study abroad Computer", "studies abroad Computer science", "study abroad Computer science", "studies abroad CSE", "study abroad CSE",
+                  "Computer foreign colleges", "Computer foreign college", "Computer science foreign colleges", "Computer science foreign college", "CSE foreign colleges", "CSE foreign college",
+                  "International Universities Computer", "International Universities CSE", "International Universities Computer science"],
+     "responses": ["For Computer Engineers, We had abroad studies in #Abroad#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Scope",
+     "patterns": ["scope Computer", "scope Computer science", "scope CSE", "Future scope Computer", "Future scope Computer science", "Future scope CSE"],
+     "responses": ["The scope of Computer department is #Scope#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Cutoff",
+     "patterns": ["Cutoff Computer", "Cutoff Computer science", "Cutoff CSE", "ranking Computer", "ranking Computer science", "ranking CSE",
+                  "rank computer", "merit computer", "merits computer", "ranks computer", "rank computer science", "merit computer science",
+                  "merits computer science", "ranks computer science", "rank cse", "merit cse", "merits cse", "ranks cse"],
+     "responses": ["The last year cutoff ranking in Computer department is #Cutoff#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_D2D",
+     "patterns": ["D2D seats Computer", "D2D seat Computer", "D2D seats Computer science", "D2D seat Computer science", "D2D seats CSE", "D2D seat CSE",
+                  "seats diploma Computer", "seat diploma Computer", "seats diploma Computer science", "seat diploma Computer science", "seats diploma CSE", "seat diploma CSE"],
+     "responses": ["In Computer department, the total D2D seats are #D2D_Seats#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Master_program",
+     "patterns": ["Master computer", "Master computer science", "Master CSE", "Master degree computer", "Master degree computer science",
+                  "Master degree CSE", "Master program", "Master program computer", "Master program computer science", "Master program CSE"],
+     "responses": ["In Computer Engineering, #Master#"],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CSE_Result",
+     "patterns": ["result computer", "results computer", "grade computer", "grades computer", "result computer science",
+                  "results computer science", "grade computer science", "grades computer science", "result cse", "results cse", "grade cse", "grades cse"],
+     "responses": ["In Computer Engineering department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Computer_Engineering"
+    },
+
+    {"tag": "CE_Seats",
+     "patterns": ["seats Civil","seat Civil", "seats CE", "Seat CE", "seats ACPC Civil", "seat ACPC Civil",
+                  "seats ACPC CE", "seat ACPC CE", "seats MQ Civil", "seat MQ Civil", "seats MQ CE", "seat MQ CE",
+                  "seats management quota Civil", "seat management quota Civil", "seats management quota CE",
+                  "seat management quota CE", "seats management Civil", "seat management Civil", "seats management CE",
+                  "seat management CE", "ACPC Management Quota seats Civil", "ACPC Management Quota seat Civil", "ACPC Management Quota seats CE", "ACPC Management Quota seat CE"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Civil Engineering Department."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_shifts",
+     "patterns": ["shifts Civil", "shift Civil", "shifts CE", "shift CE"],
+     "responses": ["There are #shifts# in Civil Engineering Department. Timings are same."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Placement",
+     "patterns": ["placements Civil", "placement Civil",  "placements CE", "placement CE", "recruitment Civil",
+                  "recruitment CE", "placed Civil", "placed CE",  "jobs Civil", "job Civil", "jobs CE", "job CE"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Civil Engineering department."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Companies",
+     "patterns": ["companies Civil", "company Civil", "companies CE", "company CE",
+                  "companies hire Civil", "company hire Civil", "companies hire CE", "company hire CE"],
+     "responses": ["Last year #Companies# companies for Civil engineers around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Package",
+     "patterns": ["salaries Civil", "salary Civil",  "salaries CE", "salary CE", "packages Civil", "package Civil", "packages CE", "package CE"],
+     "responses": ["The average on-campus salary package for Civil Engineers is #Package#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Staffs",
+     "patterns": ["faculties Civil", "faculty Civil", "faculties CE", "faculty CE", "teachers Civil", "teacher Civil",
+                  "teachers CE", "teacher CE", "Staffs Civil", "Staff Civil", "Staffs CE", "Staff CE"],
+     "responses": ["In Civil department, there are #Staffs# faculties."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Labs",
+     "patterns": ["Number labs Civil", "Number lab Civil",  "Number labs CE", "Number lab CE", "labs Civil", "lab Civil",
+                  "Number laboratories Civil", "Number laboratory Civil",  "Number laboratories CE", "Number laboratory CE", "laboratories Civil", "laboratory Civil",
+                  "labs CE", "lab CE", "laboratories CE", "laboratory CE", "workshops Civil", "workshop Civil", "workshops CE", "workshop CE"],
+     "responses": ["There are #Labs# labs in civil department of our college."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Instruments",
+     "patterns": ["instruments Civil", "instrument Civil", "instruments CE", "instrument CE", "equipments Civil", "equipments Civil", "equipments CE", "equipments CE"],
+     "responses": ["In civil department, we have around #Instruments# instruments per lab."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Lab_Facility",
+     "patterns": ["lab facilities Civil", "Lab facility Civil", "lab facilities CE", "Lab facility CE"],
+     "responses": ["We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our Civil Engineering Department."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Schedule",
+     "patterns": ["lectures lab day Civil", "lecture lab day Civil", "lectures lab day CE", "lecture lab day CE",
+                  "lectures daily Civil", "lecture daily Civil", "lectures daily CE", "lecture daily CE",
+                  "lectures lab daily Civil", "lecture lab daily Civil",  "lectures lab daily CE", "lecture lab daily CE",
+                  "Class schedule Civil", "Class schedule CE", "routine table Civil", "routine table CE"],
+     "responses": ["Daily schedule for civil engineering is #Schedule#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Classes",
+     "patterns": ["classes Civil", "class Civil", "classes CE", "class CE", "divisions Civil", "division Civil",
+                  "divisions CE", "division CE", "Classrooms Civil", "Classroom Civil", "Classrooms CE", "Classroom CE"],
+     "responses": ["There are #Classes# classes for each year batch in Civil engineering department."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Students_Class",
+     "patterns": ["class strengths Civil", "class strength Civil", "class strengths CE", "class strength CE",
+                  "Students per class Civil", "Student per class Civil", "Students per class CE", "Student per class CE"],
+     "responses": ["In civil department, #Students_Class# per class is allowed."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Extra_Activities",
+     "patterns": ["co-curricular activities Civil", "co-curricular activity Civil", "co-curricular activities CE", "co-curricular activity CE",
+                  "extra curricular activities Civil", "extra curricular activity Civil", "extra curricular activities CE", "extra curricular activity CE",
+                  "Activities Civil", "Activity Civil", "Activities CE", "Activity CE"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Civil Engineering students."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Syllabus",
+     "patterns": ["Syllabus Civil","Syllabus CE", "course Civil", "course CE"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Abroad",
+     "patterns": ["abroad colleges Civil", "abroad college Civil", "abroad colleges CE", "abroad college CE",
+                  "foreign universities Civil", "foreign university Civil", "foreign universities CE", "foreign university CE",
+                  "studies abroad Civil", "study abroad Civil", "studies abroad CE", "study abroad CE",
+                  "Civil foreign colleges", "Civil foreign college", "foreign colleges CE", "foreign college CE",
+                  "International Universities Civil", "International Universities CE"],
+     "responses": ["For Civil Engineers, We had abroad studies in #Abroad#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_BG_Ratio",
+     "patterns": ["Sex ratio Civil", "Sex ratio CE", "boys girls civil", "boys girls CE", "Girl Boy ratio civil", "Girl Boy ratio CE"],
+     "responses": ["In Civil department, the girl boy ratio is #BG_Ratio#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Scope",
+     "patterns": ["scope Civil", "scope CE", "Future scope Civil", "Future scope CE"],
+     "responses": ["The scope of Civil department is #Scope#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Cutoff",
+     "patterns": ["Cutoff Civil", "Cutoff CE", "ranking Civil", "ranking CE", "rank civil", "merit civil", "merits civil", "ranks civil",
+                  "rank ce", "merit ce", "merits ce", "ranks ce"],
+     "responses": ["The last year cutoff ranking in Civil department is #Cutoff#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_D2D",
+     "patterns": ["D2D seats Civil", "D2D seat Civil", "D2D seats CE", "D2D seat CE",
+                  "seats diploma Civil", "seat diploma Civil", "seats diploma CE", "seat diploma CE"],
+     "responses": ["In Civil department, the total D2D seats are #D2D_Seats#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Master_program",
+     "patterns": ["Master civil", "Master CE", "Master degree civil", "Master degree CE", "Master program civil", "Master program CE"],
+     "responses": ["In Civil Engineering, #Master#"],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "CE_Result",
+     "patterns": ["result civil", "results civil", "grade civil", "grades civil", "result ce", "results ce", "grade ce", "grades ce"],
+     "responses": ["In Civil Engineering department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Civil_Engineering"
+    },
+
+    {"tag": "ME_Seats",
+     "patterns": ["seats Mechanical","seat Mechanical", "seats ME", "Seat ME", "seats ACPC Mechanical", "seat ACPC Mechanical",
+                  "seats ACPC ME", "seat ACPC ME", "seats MQ Mechanical", "seat MQ Mechanical", "seats MQ ME", "seat MQ ME",
+                  "seats management quota Mechanical", "seat management quota Mechanical", "seats management quota ME",
+                  "seat management quota ME", "seats management Mechanical", "seat management Mechanical", "seats management ME",
+                  "seat management ME", "ACPC Management Quota seats Mechanical", "ACPC Management Quota seat Mechanical", "ACPC Management Quota seats ME", "ACPC Management Quota seat ME"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Mechanical Engineering Department."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_shifts",
+     "patterns": ["shifts Mechanical", "shift Mechanical", "shifts ME", "shift ME"],
+     "responses": ["There are #shifts# in Mechanical Engineering Department. Timings are same."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Placement",
+     "patterns": ["placements Mechanical", "placement Mechanical",  "placements ME", "placement ME", "recruitment Mechanical",
+                  "recruitment ME", "placed Mechanical", "placed ME",  "jobs Mechanical", "job Mechanical", "jobs ME", "job ME"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Mechanical Engineering department."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Companies",
+     "patterns": ["companies Mechanical", "company Mechanical", "companies ME", "company ME",
+                  "companies hire Mechanical", "company hire Mechanical", "companies hire ME", "company hire ME"],
+     "responses": ["Last year #Companies# companies for Mechanical engineers around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Package",
+     "patterns": ["salaries Mechanical", "salary Mechanical",  "salaries ME", "salary ME", "packages Mechanical", "package Mechanical", "packages ME", "package ME"],
+     "responses": ["The average on-campus salary package for Mechanical Engineers is #Package#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Staffs",
+     "patterns": ["faculties Mechanical", "faculty Mechanical", "faculties ME", "faculty ME", "teachers Mechanical", "teacher Mechanical",
+                  "teachers ME", "teacher ME", "Staffs Mechanical", "Staff Mechanical", "Staffs ME", "Staff ME"],
+     "responses": ["In Mechanical department, there are #Staffs# faculties."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Labs",
+     "patterns": ["Number labs Mechanical", "Number lab Mechanical",  "Number labs ME", "Number lab ME", "labs Mechanical", "lab Mechanical",
+                  "Number laboratories Mechanical", "Number laboratory Mechanical",  "Number laboratories ME", "Number laboratory ME", "laboratories Mechanical", "laboratory Mechanical",
+                  "labs ME", "lab ME", "laboratories ME", "laboratory ME", "workshops Mechanical", "workshop Mechanical", "workshops ME", "workshop ME"],
+     "responses": ["There are #Labs# labs in Mechanical department of our college."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Instruments",
+     "patterns": ["instruments Mechanical", "instrument Mechanical", "instruments ME", "instrument ME", "equipments Mechanical",
+                  "equipments Mechanical", "equipments ME", "equipments ME", "machinery mechanical", "machinery ME"],
+     "responses": ["In Mechanical department, we have around #Instruments# instruments per lab."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Lab_Facility",
+     "patterns": ["lab facilities Mechanical", "Lab facility Mechanical", "lab facilities ME", "Lab facility ME"],
+     "responses": ["We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our Mechanical Engineering Department."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Schedule",
+     "patterns": ["lectures lab day Mechanical", "lecture lab day Mechanical", "lectures lab day ME", "lecture lab day ME",
+                  "lectures daily Mechanical", "lecture daily Mechanical", "lectures daily ME", "lecture daily ME",
+                  "lectures lab daily Mechanical", "lecture lab daily Mechanical",  "lectures lab daily ME", "lecture lab daily ME",
+                  "Class schedule Mechanical", "Class schedule ME", "routine table Mechanical", "routine table ME"],
+     "responses": ["Daily schedule for Mechanical engineering is #Schedule#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Classes",
+     "patterns": ["classes Mechanical", "class Mechanical", "classes ME", "class ME", "divisions Mechanical", "division Mechanical",
+                  "divisions ME", "division ME", "Classrooms Mechanical", "Classroom Mechanical", "Classrooms ME", "Classroom ME"],
+     "responses": ["There are #Classes# classes for each year batch in Mechanical engineering department."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Students_Class",
+     "patterns": ["class strengths Mechanical", "class strength Mechanical", "class strengths ME", "class strength ME",
+                  "Students per class Mechanical", "Student per class Mechanical", "Students per class ME", "Student per class ME"],
+     "responses": ["In Mechanical department, #Students_Class# per class is allowed."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Extra_Activities",
+     "patterns": ["co-curricular activities Mechanical", "co-curricular activity Mechanical", "co-curricular activities ME", "co-curricular activity ME",
+                  "extra curricular activities Mechanical", "extra curricular activity Mechanical", "extra curricular activities ME", "extra curricular activity ME",
+                  "Activities Mechanical", "Activity Mechanical", "Activities ME", "Activity ME"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Mechanical Engineering students."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Syllabus",
+     "patterns": ["Syllabus Mechanical","Syllabus ME", "course Mechanical", "course ME"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Abroad",
+     "patterns": ["abroad colleges Mechanical", "abroad college Mechanical", "abroad colleges ME", "abroad college ME",
+                  "foreign universities Mechanical", "foreign university Mechanical", "foreign universities ME", "foreign university ME",
+                  "studies abroad Mechanical", "study abroad Mechanical", "studies abroad ME", "study abroad ME",
+                  "Mechanical foreign colleges", "Mechanical foreign college", "foreign colleges ME", "foreign college ME",
+                  "International Universities Mechanical", "International Universities ME"],
+     "responses": ["For Mechanical Engineers, We had abroad studies in #Abroad#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_BG_Ratio",
+     "patterns": ["Sex ratio Mechanical", "Sex ratio ME", "boys girls Mechanical", "boys girls ME", "Girl Boy ratio Mechanical", "Girl Boy ratio ME"],
+     "responses": ["In Mechanical department, the girl boy ratio is #BG_Ratio#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Scope",
+     "patterns": ["scope Mechanical", "scope ME", "Future scope Mechanical", "Future scope ME"],
+     "responses": ["The scope of Mechanical department is #Scope#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Cutoff",
+     "patterns": ["Cutoff Mechanical", "Cutoff ME", "ranking Mechanical", "ranking ME", "rank mechanical", "merit mechanical", "merits mechanical",
+                  "ranks mechanical", "rank ME", "merit ME", "merits ME", "ranks ME"],
+     "responses": ["The last year cutoff ranking in Mechanical department is #Cutoff#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_D2D",
+     "patterns": ["D2D seats Mechanical", "D2D seat Mechanical", "D2D seats ME", "D2D seat ME",
+                  "seats diploma Mechanical", "seat diploma Mechanical", "seats diploma ME", "seat diploma ME"],
+     "responses": ["In Mechanical department, the total D2D seats are #D2D_Seats#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Master_program",
+     "patterns": ["Master Mechanical", "Master ME", "Master degree Mechanical", "Master degree ME", "Master program Mechanical", "Master program ME"],
+     "responses": ["In Mechanical Engineering, #Master#"],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "ME_Result",
+     "patterns": ["result Mechanical", "results Mechanical", "grade Mechanical", "grades Mechanical", "result ME", "results ME", "grade ME", "grades ME"],
+     "responses": ["In Mechanical Engineering department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Mechanical_Engineering"
+    },
+
+    {"tag": "EE_Seats",
+     "patterns": ["seats Electrical","seat Electrical", "seats EE", "Seat EE", "seats ACPC Electrical", "seat ACPC Electrical",
+                  "seats ACPC EE", "seat ACPC EE", "seats MQ Electrical", "seat MQ Electrical", "seats MQ EE", "seat MQ EE",
+                  "seats management quota Electrical", "seat management quota Electrical", "seats management quota EE",
+                  "seat management quota EE", "seats management Electrical", "seat management Electrical", "seats management EE",
+                  "seat management EE", "ACPC Management Quota seats Electrical", "ACPC Management Quota seat Electrical", "ACPC Management Quota seats EE", "ACPC Management Quota seat EE"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Electrical Engineering Department."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_shifts",
+     "patterns": ["shifts Electrical", "shift Electrical", "shifts EE", "shift EE"],
+     "responses": ["There are #shifts# in Electrical Engineering Department. Timings are same."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Placement",
+     "patterns": ["placements Electrical", "placement Electrical",  "placements EE", "placement EE", "recruitment Electrical",
+                  "recruitment EE", "placed Electrical", "placed EE",  "jobs Electrical", "job Electrical", "jobs EE", "job EE"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Electrical Engineering department."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Companies",
+     "patterns": ["companies Electrical", "company Electrical", "companies EE", "company EE",
+                  "companies hire Electrical", "company hire Electrical", "companies hire EE", "company hire EE"],
+     "responses": ["Last year #Companies# companies for Electrical engineers around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Package",
+     "patterns": ["salaries Electrical", "salary Electrical",  "salaries EE", "salary EE", "packages Electrical", "package Electrical", "packages EE", "package EE"],
+     "responses": ["The average on-campus salary package for Electrical Engineers is #Package#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Staffs",
+     "patterns": ["faculties Electrical", "faculty Electrical", "faculties EE", "faculty EE", "teachers Electrical", "teacher Electrical",
+                  "teachers EE", "teacher EE", "Staffs Electrical", "Staff Electrical", "Staffs EE", "Staff EE"],
+     "responses": ["In Electrical department, there are #Staffs# faculties."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Labs",
+     "patterns": ["Number labs Electrical", "Number lab Electrical",  "Number labs EE", "Number lab EE", "labs Electrical", "lab Electrical",
+                  "Number laboratories Electrical", "Number laboratory Electrical",  "Number laboratories EE", "Number laboratory EE", "laboratories Electrical", "laboratory Electrical",
+                  "labs EE", "lab EE", "laboratories EE", "laboratory EE", "workshops Electrical", "workshop Electrical", "workshops EE", "workshop EE" ],
+     "responses": ["There are #Labs# labs in Electrical department of our college."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Instruments",
+     "patterns": ["instruments Electrical", "instrument Electrical", "instruments EE", "instrument EE", "equipments Electrical", "equipments Electrical", "equipments EE", "equipments EE"],
+     "responses": ["In Electrical department, we have around #Instruments# instruments per lab."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Lab_Facility",
+     "patterns": ["lab facilities Electrical", "Lab facility Electrical", "lab facilities EE", "Lab facility EE"],
+     "responses": ["We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our Electrical Engineering Department."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Schedule",
+     "patterns": ["lectures lab day Electrical", "lecture lab day Electrical", "lectures lab day EE", "lecture lab day EE",
+                  "lectures daily Electrical", "lecture daily Electrical", "lectures daily EE", "lecture daily EE",
+                  "lectures lab daily Electrical", "lecture lab daily Electrical",  "lectures lab daily EE", "lecture lab daily EE",
+                  "Class schedule Electrical", "Class schedule EE", "routine table Electrical", "routine table EE"],
+     "responses": ["Daily schedule for Electrical engineering is #Schedule#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Classes",
+     "patterns": ["classes Electrical", "class Electrical", "classes EE", "class EE", "divisions Electrical", "division Electrical",
+                  "divisions EE", "division EE", "Classrooms Electrical", "Classroom Electrical", "Classrooms EE", "Classroom EE"],
+     "responses": ["There are #Classes# classes for each year batch in Electrical engineering department."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Students_Class",
+     "patterns": ["class strengths Electrical", "class strength Electrical", "class strengths EE", "class strength EE",
+                  "Students per class Electrical", "Student per class Electrical", "Students per class EE", "Student per class EE"],
+     "responses": ["In Electrical department, #Students_Class# per class is allowed."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Extra_Activities",
+     "patterns": ["co-curricular activities Electrical", "co-curricular activity Electrical", "co-curricular activities EE", "co-curricular activity EE",
+                  "extra curricular activities Electrical", "extra curricular activity Electrical", "extra curricular activities EE", "extra curricular activity EE",
+                  "Activities Electrical", "Activity Electrical", "Activities EE", "Activity EE"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Electrical Engineering students."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Syllabus",
+     "patterns": ["Syllabus Electrical","Syllabus EE", "course Electrical", "course EE"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Abroad",
+     "patterns": ["abroad colleges Electrical", "abroad college Electrical", "abroad colleges EE", "abroad college EE",
+                  "foreign universities Electrical", "foreign university Electrical", "foreign universities EE", "foreign university EE",
+                  "studies abroad Electrical", "study abroad Electrical", "studies abroad EE", "study abroad EE",
+                  "Electrical foreign colleges", "Electrical foreign college", "foreign colleges EE", "foreign college EE",
+                  "International Universities Electrical", "International Universities EE"],
+     "responses": ["For Electrical Engineers, We had abroad studies in #Abroad#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_BG_Ratio",
+     "patterns": ["Sex ratio Electrical", "Sex ratio EE", "boys girls Electrical", "boys girls EE", "Girl Boy ratio Electrical", "Girl Boy ratio EE"],
+     "responses": ["In Electrical department, the girl boy ratio is #BG_Ratio#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Scope",
+     "patterns": ["scope Electrical", "scope EE", "Future scope Electrical", "Future scope EE"],
+     "responses": ["The scope of Electrical department is #Scope#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Cutoff",
+     "patterns": ["Cutoff Electrical", "Cutoff EE", "ranking Electrical", "ranking EE", "rank electrical", "merit electrical", "merits electrical",
+                  "ranks electrical", "rank EE", "merit EE", "merits EE", "ranks EE"],
+     "responses": ["The last year cutoff ranking in Electrical department is #Cutoff#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_D2D",
+     "patterns": ["D2D seats Electrical", "D2D seat Electrical", "D2D seats EE", "D2D seat EE",
+                  "seats diploma Electrical", "seat diploma Electrical", "seats diploma EE", "seat diploma EE"],
+     "responses": ["In Electrical department, the total D2D seats are #D2D_Seats#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Master_program",
+     "patterns": ["Master Electrical", "Master EE", "Master degree Electrical", "Master degree EE", "Master program Electrical", "Master program EE"],
+     "responses": ["In Electrical Engineering, #Master#"],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EE_Result",
+     "patterns": ["result Electrical", "results Electrical", "grade Electrical", "grades Electrical", "result EE", "results EE", "grade EE", "grades EE"],
+     "responses": ["In Electrical Engineering department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Electrical_Engineering"
+    },
+
+    {"tag": "EC_Seats",
+     "patterns": ["seats Electronics Communication","seat Electronics Communication", "seats EC", "Seat EC", "seats ACPC Electronics Communication", "seat ACPC Electronics Communication",
+                  "seats Electronic Communication","seat Electronic Communication", "seats ACPC Electronic Communication", "seat ACPC Electronic Communication",
+                  "seats ACPC EC", "seat ACPC EC", "seats MQ Electronics Communication", "seat MQ Electronics Communication", "seats MQ EC", "seat MQ EC",
+                  "seats MQ Electronic Communication", "seat MQ Electronic Communication", "seats management quota Electronics Communication",
+                  "seat management quota Electronics Communication", "seats management quota EC", "seats management quota Electronic Communication", "seat management quota Electronic Communication",
+                  "seat management quota EC", "seats management Electronics Communication", "seat management Electronics Communication", "seats management EC",
+                  "seats management Electronic Communication", "seat management Electronic Communication", "seat management EC", "ACPC Management Quota seats Electronics Communication",
+                  "ACPC Management Quota seat Electronics Communication", "ACPC Management Quota seats EC", "ACPC Management Quota seat EC",
+                  "ACPC Management Quota seats Electronic Communication", "ACPC Management Quota seat Electronic Communication"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Electronics and Communication Engineering Department."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_shifts",
+     "patterns": ["shifts Electronics Communication", "shift Electronics Communication", "shifts Electronic Communication", "shift Electronic Communication", "shifts EC", "shift EC"],
+     "responses": ["There are #shifts# in Electronics and Communication Engineering Department. Timings are same."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Placement",
+     "patterns": ["placements Electronics Communication", "placement Electronics Communication", "placements EC", "placement EC", "recruitment Electronics Communication",
+                  "placements Electronic Communication", "placement Electronic Communication", "recruitment Electronic Communication",
+                  "recruitment EC", "placed Electronics Communication", "placed EC", "jobs Electronics Communication", "job Electronics Communication", "jobs EC", "job EC",
+                  "placed Electronic Communication", "jobs Electronic Communication", "job Electronic Communication"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Electronics and Communication Engineering department."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Companies",
+     "patterns": ["companies Electronics Communication", "company Electronics Communication", "companies EC", "company EC", "companies Electronic Communication", "company Electronic Communication",
+                  "companies hire Electronics Communication", "company hire Electronics Communication", "companies hire Electronic Communication", "company hire Electronic Communication", "companies hire EC", "company hire EC"],
+     "responses": ["Last year #Companies# companies for Electronics and Communication engineers around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Package",
+     "patterns": ["salaries Electronics Communication", "salary Electronics Communication", "salaries EC", "salary EC", "packages Electronics Communication",
+                  "salaries Electronic Communication", "salary Electronic Communication", "package Electronics Communication", "package Electronic Communication", "packages EC", "package EC"],
+     "responses": ["The average on-campus salary package for Electronics and Communication Engineers is #Package#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Staffs",
+     "patterns": ["faculties Electronics Communication", "faculty Electronics Communication", "faculties EC", "faculty EC", "teachers Electronics Communication", "teacher Electronics Communication",
+                  "faculties Electronic Communication", "faculty Electronic Communication", "teachers Electronic Communication", "teacher Electronic Communication", "Staff Electronic Communication",
+                  "teachers EC", "teacher EC", "Staffs Electronics Communication", "Staff Electronics Communication", "Staffs Electronic Communication", "Staffs EC", "Staff EC"],
+     "responses": ["In Electronics and Communication department, there are #Staffs# faculties."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Labs",
+     "patterns": ["Number labs Electronics Communication", "Number lab Electronics Communication", "Number labs EC", "Number lab EC", "labs Electronics Communication", "lab Electronics Communication",
+                  "Number laboratories Electronics Communication", "Number laboratory Electronics Communication", "Number laboratories EC", "Number laboratory EC",
+                  "laboratories Electronics Communication", "laboratory Electronics Communication", "Number labs Electronic Communication", "Number lab Electronic Communication",
+                  "labs Electronic Communication", "lab Electronic Communication", "Number laboratories Electronic Communication", "Number laboratory Electronic Communication",
+                  "laboratories Electronic Communication", "laboratory Electronic Communication", "labs EC", "lab EC", "laboratories EC", "laboratory EC", "workshops Electronics Communication",
+                  "workshop Electronics Communication", "workshops Electronic Communication", "workshop Electronic Communication", "workshops EC", "workshop EC"],
+     "responses": ["There are #Labs# labs in Electronics and Communication department of our college."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Instruments",
+     "patterns": ["instruments Electronics Communication", "instrument Electronics Communication", "instruments EC", "instrument EC", "equipments Electronics Communication",
+                  "instruments Electronic Communication", "instrument Electronic Communication", "equipments Electronic Communication", "equipment Electronic Communication",
+                  "equipments Electronics Communication", "equipments EC", "equipments EC"],
+     "responses": ["In Electronics and Communication department, we have around #Instruments# instruments per lab."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Lab_Facility",
+     "patterns": ["lab facilities Electronics Communication", "Lab facility Electronics Communication", "lab facilities Electronic Communication", "Lab facility Electronic Communication", "lab facilities EC", "Lab facility EC"],
+     "responses": ["We have CCTVs, Universal Testing Machine(UTM) and much more facilities in Our Electronics and Communication Engineering Department."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Schedule",
+     "patterns": ["lectures lab day Electronics Communication", "lecture lab day Electronics Communication", "lectures lab day EC", "lecture lab day EC",
+                  "lectures lab day Electronic Communication", "lecture lab day Electronic Communication", "lectures daily Electronic Communication", "lecture daily Electronic Communication",
+                  "lectures daily Electronics Communication", "lecture daily Electronics Communication", "lectures daily EC", "lecture daily EC",
+                  "lectures lab daily Electronics Communication", "lecture lab daily Electronics Communication", "lectures lab daily EC", "lecture lab daily EC",
+                  "lectures lab daily Electronic Communication", "lecture lab daily Electronic Communication", "Class schedule Electronic Communication", "routine table Electronic Communication",
+                  "Class schedule Electronics Communication", "Class schedule EC", "routine table Electronics Communication", "routine table EC"],
+     "responses": ["Daily schedule for Electronics and Communication engineering is #Schedule#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Classes",
+     "patterns": ["classes Electronics Communication", "class Electronics Communication", "classes EC", "class EC", "divisions Electronics Communication", "division Electronics Communication",
+                  "classes Electronic Communication", "class Electronic Communication", "divisions Electronic Communication", "division Electronic Communication",
+                  "divisions EC", "division EC", "Classrooms Electronics Communication", "Classroom Electronics Communication", "Classrooms EC", "Classroom EC",
+                  "Classrooms Electronic Communication", "Classroom Electronic Communication"],
+     "responses": ["There are #Classes# classes for each year batch in Electronics and Communication engineering department."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Students_Class",
+     "patterns": ["class strengths Electronics Communication", "class strength Electronics Communication", "class strengths EC", "class strength EC",
+                  "class strengths Electronic Communication", "class strength Electronic Communication", "Students per class Electronic Communication", "Student per class Electronic Communication",
+                  "Students per class Electronics Communication", "Student per class Electronics Communication", "Students per class EC", "Student per class EC"],
+     "responses": ["In Electronics and Communication department, #Students_Class# per class is allowed."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Extra_Activities",
+     "patterns": ["co-curricular activities Electronics Communication", "co-curricular activity Electronics Communication", "co-curricular activities EC", "co-curricular activity EC",
+                  "co-curricular activities Electronic Communication", "co-curricular activity Electronic Communication", "Activities Electronic Communication", "Activity Electronic Communication",
+                  "extra curricular activities Electronic Communication", "extra curricular activity Electronic Communication",
+                  "Activities Electronics Communication", "Activity Electronics Communication", "Activities EC", "Activity EC"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Electronics and Communication Engineering students."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Syllabus",
+     "patterns": ["Syllabus Electronics Communication","Syllabus EC", "course Electronics Communication", "Syllabus Electronic Communication", "course Electronic Communication", "course EC"],
+     "responses": ["Syllabus is common for 1st year in all department. The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Abroad",
+     "patterns": ["abroad colleges Electronics Communication", "abroad college Electronics Communication", "abroad colleges EC", "abroad college EC",
+                  "abroad colleges Electronic Communication", "abroad college Electronic Communication", "foreign universities Electronic Communication", "foreign university Electronic Communication",
+                  "foreign universities Electronics Communication", "foreign university Electronics Communication", "foreign universities EC", "foreign university EC",
+                  "foreign universities Electronic Communication", "foreign university Electronic Communication", "studies abroad Electronic Communication", "study abroad Electronic Communication",
+                  "studies abroad Electronics Communication", "study abroad Electronics Communication", "studies abroad EC", "study abroad EC",
+                  "Electronics Communication foreign colleges", "Electronics Communication foreign college", "foreign colleges EC", "foreign college EC",
+                  "Electronic Communication foreign colleges", "Electronic Communication foreign college", "International Universities Electronic Communication",
+                  "International Universities Electronics Communication", "International Universities EC"],
+     "responses": ["For Electronics and Communication Engineers, We had abroad studies in #Abroad#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_BG_Ratio",
+     "patterns": ["Sex ratio Electronics Communication", "Sex ratio EC", "boys girls Electronics Communication", "boys girls EC", "Girl Boy ratio Electronics Communication", "Girl Boy ratio EC",
+                  "Sex ratio Electronic Communication", "boys girls Electronic Communication", "Girl Boy ratio Electronic Communication"],
+     "responses": ["In Electronics and Communication department, the girl boy ratio is #BG_Ratio#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Scope",
+     "patterns": ["scope Electronics Communication", "scope EC", "Future scope Electronics Communication", "Future scope EC", "scope Electronic Communication", "Future scope Electronic Communication"],
+     "responses": ["The scope of EC department is #Scope#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Cutoff",
+     "patterns": ["Cutoff Electronics Communication", "Cutoff EC", "ranking Electronics Communication", "ranking EC",
+                  "Cutoff Electronic Communication", "ranking Electronic Communication", "rank Electronics Communication", "merit Electronics Communication",
+                  "merits Electronics Communication", "ranks Electronics Communication", "rank Electronic Communication", "merit Electronic Communication",
+                  "merits Electronic Communication", "ranks Electronic Communication", "rank EC", "merit EC", "merits EC", "ranks EC"],
+     "responses": ["The last year cutoff ranking in EC department is #Cutoff#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_D2D",
+     "patterns": ["D2D seats Electronics Communication", "D2D seat Electronics Communication", "D2D seats EC", "D2D seat EC", "D2D seats Electronic Communication",
+                  "D2D seat Electronic Communication", "seats diploma Electronic Communication", "seat diploma Electronic Communication",
+                  "seats diploma Electronics Communication", "seat diploma Electronics Communication", "seats diploma EC", "seat diploma EC"],
+     "responses": ["In EC department, the total D2D seats are #D2D_Seats#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Vs_EE",
+     "patterns": ["difference between Electrical Electronics Communication", "difference between Electrical Electronic Communication", "Difference between EE EC",
+                  "better EE EC", "Electrical better Electronics Communication", "Electrical better Electronic Communication"],
+     "responses": ["About voltage difference."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Master_program",
+     "patterns": ["Master Electronic Communication", "Master EC", "Master degree Electronic Communication", "Master degree EC", "Master program Electronic Communication", "Master program EC",
+                  "Master Electronic", "Master degree Electronic", "Master program Electronic", "Master Electronics", "Master Electronics Communication", "Master degree Electronics",
+                  "Master degree Electronics Communication", "Master program Electronics", "Master program Electronics Communication"],
+     "responses": ["In Electronic Communication Engineering, #Master#"],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "EC_Result",
+     "patterns": ["result Electronic Communication", "results Electronic Communication", "grade Electronic Communication", "grades Electronic Communication",
+                  "result Electronics Communication", "results Electronics Communication", "grade Electronics Communication", "grades Electronics Communication",
+                  "result Electronics", "results Electronics", "grade Electronics", "grades Electronics", "result EC", "results EC", "grade EC", "grades EC"],
+     "responses": ["In Electronic Communication Engineering department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Electronic_Communication_Engineering"
+    },
+
+    {"tag": "PH_Seats",
+     "patterns": ["seats Pharmacy","seat Pharmacy", "seats ACPC Pharmacy", "seat ACPC Pharmacy", "seats MQ Pharmacy", "seat MQ Pharmacy",
+                  "seats management quota Pharmacy", "seats management quota Pharmacy", "seats management Pharmacy", "seats management Pharmacy",
+                  "ACPC Management Quota seats Pharmacy", "ACPC Management Quota seat Pharmacy"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Pharmacy Department."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_shifts",
+     "patterns": ["shifts Pharmacy", "shift Pharmacy"],
+     "responses": ["There are #shifts# in Pharmacy Department. Timings are same."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Placement",
+     "patterns": ["placements Pharmacy", "placement Pharmacy", "recruitment Pharmacy", "placed Pharmacy", "jobs Pharmacy", "job Pharmacy"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Pharmacy department."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Companies",
+     "patterns": ["companies Pharmacy", "company Pharmacy", "companies hire Pharmacy", "company hire Pharmacy"],
+     "responses": ["Last year #Companies# companies for Pharmacy around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Package",
+     "patterns": ["salaries Pharmacy", "salary Pharmacy", "packages Pharmacy", "package Pharmacy"],
+     "responses": ["The average on-campus salary package for Pharmacy is #Package#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Staffs",
+     "patterns": ["faculties Pharmacy", "faculty Pharmacy", "teachers Pharmacy", "teacher Pharmacy", "Staffs Pharmacy", "Staff Pharmacy"],
+     "responses": ["In Pharmacy department, there are #Staffs# faculties."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Labs",
+     "patterns": ["Number labs Pharmacy", "Number lab Pharmacy", "labs Pharmacy", "lab Pharmacy", "Number laboratories Pharmacy", "Number laboratory Pharmacy",
+                  "laboratories Pharmacy", "laboratory Pharmacy", "workshops Pharmacy", "workshop Pharmacy"],
+     "responses": ["There are #Labs# labs in Pharmacy department of our college."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Lab_Facility",
+     "patterns": ["lab facilities Pharmacy", "Lab facility Pharmacy"],
+     "responses": ["We have CCTVs and much more facilities in Our Pharmacy Department."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Schedule",
+     "patterns": ["lectures lab day Pharmacy", "lecture lab day Pharmacy",  "lectures daily Pharmacy", "lecture daily Pharmacy",
+                  "lectures lab daily Pharmacy", "lecture lab daily Pharmacy", "Class schedule Pharmacy", "routine table Pharmacy"],
+     "responses": ["Daily schedule for Pharmacy is #Schedule#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Classes",
+     "patterns": ["classes Pharmacy", "class Pharmacy", "divisions Pharmacy", "division Pharmacy", "Classrooms Pharmacy", "Classroom Pharmacy"],
+     "responses": ["There are #Classes# classes for each year batch in Pharmacy department."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Students_Class",
+     "patterns": ["class strengths Pharmacy", "class strength Pharmacy", "Students per class Pharmacy", "Student per class Pharmacy"],
+     "responses": ["In Pharmacy department, #Students_Class# per class is allowed."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Extra_Activities",
+     "patterns": ["co-curricular activities Pharmacy", "co-curricular activity Pharmacy", "extra curricular activities Pharmacy", "extra curricular activity Pharmacy",
+                  "Activities Pharmacy", "Activity Pharmacy"],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Pharmacy students."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Syllabus",
+     "patterns": ["Syllabus Pharmacy", "course Pharmacy"],
+     "responses": ["The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Abroad",
+     "patterns": ["abroad colleges Pharmacy", "abroad college Pharmacy", "foreign universities Pharmacy", "foreign university Pharmacy",
+                  "studies abroad Pharmacy", "study abroad Pharmacy", "Pharmacy foreign colleges", "Pharmacy foreign college", "International Universities Pharmacy"],
+     "responses": ["For Pharmacy, We had abroad studies in #Abroad#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Scope",
+     "patterns": ["scope Pharmacy", "Future scope Pharmacy"],
+     "responses": ["The scope of Pharmacy department is #Scope#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Cutoff",
+     "patterns": ["Cutoff Pharmacy", "ranking Pharmacy", "rank Pharmacy", "merit Pharmacy", "merits Pharmacy", "ranks Pharmacy"],
+     "responses": ["The last year cutoff ranking in Pharmacy department is #Cutoff#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Camps",
+     "patterns": ["Camps Pharmacy", "Camp Pharmacy"],
+     "responses": ["We organize public awareness camps and NSA camps with last 3 years awards."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Training",
+     "patterns": ["industry Training Pharmacy", "Pharmacy practice"],
+     "responses": ["There is training for #Training# after the course for Pharmacy."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Duration",
+     "patterns": ["Course Duration Pharmacy", "Duration period Pharmacy"],
+     "responses": ["The Pharmacy is of #Duration# of course."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Eligibility",
+     "patterns": ["Admission Criteria Pharmacy", "Admissions Criteria Pharmacy", "Requirements admission Pharmacy", "Requirement admission Pharmacy",
+                  "Eligibility admission Pharmacy", "Admission Pharmacy"],
+     "responses": ["The admission eligibility for Pharmacy is #Eligibility#"],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Fees",
+     "patterns": ["fees Pharmacy", "pay Pharmacy tuition"],
+     "responses": ["The tuition fees for Pharmacy is #Fees#. For more information about MQ fees contact administration. Person named #contact_name#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Timing",
+     "patterns": ["Timing Pharmacy", "Time slot Pharmacy", "duration Timings Pharmacy", "Regular timings Pharmacy", "time Pharmacy", "start time Pharmacy", "end time Pharmacy"],
+     "responses": ["The timing for Pharmacy is #Timing#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_University",
+     "patterns": ["Pharmacy university college", "Pharmacy university affiliated", "Pharmacy college affiliated"],
+     "responses": ["Our Pharmacy institute is affiliated by #University#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Master_program",
+     "patterns": ["Master Pharmacy", "Master degree Pharmacy", "Master program Pharmacy"],
+     "responses": ["In Pharmacy, #Master#"],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PH_Result",
+     "patterns": ["result Pharmacy", "results Pharmacy", "grade Pharmacy", "grades Pharmacy"],
+     "responses": ["In Pharmacy department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Pharmacy"
+    },
+
+    {"tag": "PY_Seats",
+     "patterns": ["seats Physiotherapy","seat Physiotherapy", "Physio seats", "Seat Physio", "seats ACPC Physiotherapy", "seat ACPC Physiotherapy",
+                  "seats ACPC Physio", "seat ACPC Physio", "seats MQ Physiotherapy", "seat MQ Physiotherapy", "seats MQ Physio", "seat MQ Physio",
+                  "seats management quota Physiotherapy", "seats management quota Physiotherapy", "seats management quota Physio", "seats management quota Physio",
+                  "seats management Physiotherapy", "seats management Physiotherapy", "seats management Physio", "seats management Physio",
+                  "ACPC Management Quota seats Physiotherapy", "ACPC Management Quota seat Physiotherapy", "ACPC Management Quota seats Physio", "ACPC Management Quota seat Physio"],
+     "responses": ["There are total #Total_Seats# seats in which #MQ_Seats# MQ seats and #APCP_Seats# ACPC seats in Physiotherapy Department."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_shifts",
+     "patterns": ["shifts Physiotherapy", "shift Physiotherapy", "shifts Physio", "shift Physio"],
+     "responses": ["There are #shifts# in Physiotherapy Department. Timings are same."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Placement",
+     "patterns": ["placements Physiotherapy", "placement Physiotherapy", "placements Physio", "placement Physio", "recruitment Physiotherapy", "recruitment Physio",
+                  "placed Physiotherapy", "placed Physio", "jobs Physiotherapy", "job Physiotherapy", "jobs Physio", "job Physio"],
+     "responses": ["In our college, the last year placement percentage is #Placement# in Physiotherapy department."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Companies",
+     "patterns": ["companies Physiotherapy", "company Physiotherapy", "companies Physio", "company Physio",
+                  "companies hire Physiotherapy", "company hire Physiotherapy", "companies hire Physio", "company hire Physio"],
+     "responses": ["Last year #Companies# companies for Physiotherapy around the India visited our college campus. Companies like #Companies_name#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Package",
+     "patterns": ["salaries Physiotherapy", "salary Physiotherapy",  "salaries Physio", "salary Physio",
+                  "packages Physiotherapy", "package Physiotherapy", "packages Physio", "package Physio"],
+     "responses": ["The average on-campus salary package for Physiotherapy is #Package#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Staffs",
+     "patterns": ["faculties Physiotherapy", "faculty Physiotherapy", "faculties Physio", "faculty Physio", "teachers Physiotherapy", "teacher Physiotherapy",
+                  "teachers Physio", "teacher Physio", "Staffs Physiotherapy", "Staff Physiotherapy", "Staffs Physio", "Staff Physio" ],
+     "responses": ["In Physiotherapy department, there are #Staffs# faculties."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Labs",
+     "patterns": ["Number labs Physiotherapy", "Number lab Physiotherapy", "Number labs Physio", "Number lab Physio", "labs Physiotherapy",
+                  "lab Physiotherapy", "labs Physio", "lab Physio", "Number laboratories Physiotherapy", "Number laboratory Physiotherapy",
+                  "Number laboratories Physio", "Number laboratory Physio", "laboratories Physiotherapy", "laboratory Physiotherapy", "laboratories Physio", "laboratory Physio"],
+     "responses": ["There are #Labs# labs in Physiotherapy department of our college."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Lab_Facility",
+     "patterns": [ "lab facilities Physiotherapy", "Lab facility Physiotherapy", "lab facilities Physio", "Lab facility Physio" ],
+     "responses": ["We have CCTVs and much more facilities in Our Physiotherapy Department."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Schedule",
+     "patterns": ["lectures lab day Physiotherapy", "lecture lab day Physiotherapy", "lectures lab day Physio", "lecture lab day Physio",
+                  "lectures daily Physiotherapy", "lecture daily Physiotherapy", "lectures daily Physio", "lecture daily Physio",
+                  "lectures lab daily Physiotherapy", "lecture lab daily Physiotherapy",  "lectures lab daily Physio", "lecture lab daily Physiotherapy",
+                  "Class schedule Physiotherapy", "Class schedule Physio", "routine table Physiotherapy", "routine table Physio"],
+     "responses": ["Daily schedule for Physiotherapy is #Schedule#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Classes",
+     "patterns": ["classes Physiotherapy", "class Physiotherapy", "classes Physio", "class Physio", "divisions Physiotherapy", "division Physiotherapy",
+                  "divisions Physio", "division Physio", "Classrooms Physiotherapy", "Classroom Physiotherapy", "Classrooms Physio", "Classroom Physio"],
+     "responses": ["There are #Classes# classes for each year batch in Physiotherapy department."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Students_Class",
+     "patterns": ["class strengths Physiotherapy", "class strength Physiotherapy", "class strengths Physio", "class strength Physio",
+                  "Students per class Physiotherapy", "Student per class Physiotherapy", "Students per class Physio", "Student per class Physio"],
+     "responses": ["In Physiotherapy department, #Students_Class# per class is allowed."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Extra_Activities",
+     "patterns": ["co-curricular activities Physiotherapy", "co-curricular activity Physiotherapy", "co-curricular activities Physio", "co-curricular activity Physio",
+                  "extra curricular activities Physiotherapy", "extra curricular activity Physiotherapy", "extra curricular activities Physio", "extra curricular activity Physio",
+                  "Activities Physiotherapy", "Activity Physiotherapy", "Activities Physio", "Activity Physio" ],
+     "responses": ["We organize Workshops, Expert Lectures, seminars and site visits for Physiotherapy students."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Syllabus",
+     "patterns": ["Syllabus Physiotherapy","Syllabus Physio", "course Physiotherapy", "course Physio"],
+     "responses": ["The syllabus is prepared by university. For more details of Syllabus, please visit #Syllabus#"],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Abroad",
+     "patterns": ["abroad colleges Physiotherapy", "abroad college Physiotherapy", "abroad colleges Physio", "abroad college Physio",
+                  "foreign universities Physiotherapy", "foreign university Physiotherapy", "foreign universities Physio", "foreign university Physio",
+                  "studies abroad Physiotherapy", "study abroad Physiotherapy", "studies abroad Physio", "study abroad Physio",
+                  "Physiotherapy foreign colleges", "Physiotherapy foreign college", "Physio foreign colleges", "Physio foreign college",
+                  "International Universities Physiotherapy", "International Universities Physio"],
+     "responses": ["For Physiotherapy, We had abroad studies in #Abroad#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Scope",
+     "patterns": ["scope Physiotherapy", "Future scope Physiotherapy", "scope Physio", "Future scope Physio"],
+     "responses": ["The scope of Physiotherapy department is #Scope#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Cutoff",
+     "patterns": ["Cutoff Physiotherapy", "ranking Physiotherapy", "Cutoff Physio", "ranking Physio", "rank Physiotherapy",
+                  "merit Physiotherapy", "merits Physiotherapy", "ranks Physiotherapy", "rank Physio", "merit Physio", "merits Physio", "ranks Physio"],
+     "responses": ["The last year cutoff ranking in Physiotherapy department is #Cutoff#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Hospital",
+     "patterns": ["Clinics hospitals Physiotherapy", "hospitals physiotherapy", "Clinics Physiotherapy",
+                  "Clinics hospitals Physio", "hospitals physio", "Clinics Physio"],
+     "responses": ["With 6 multi-specialist in Vadodara."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Training",
+     "patterns": ["industry Training Physiotherapy", "Physiotherapy practice", "industry Training Physio", "Physio practice"],
+     "responses": ["There is training for #Training# after the course for Physiotherapy."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Duration",
+     "patterns": ["Course Duration Physiotherapy", "Duration period Physiotherapy", "Course Duration Physio", "Duration period Physio"],
+     "responses": ["The Physiotherapy is of #Duration# of course."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Eligibility",
+     "patterns": ["Admission Criteria Physiotherapy", "Admissions Criteria Physiotherapy", "Requirements admission Physiotherapy", "Requirement admission Physiotherapy",
+                  "Eligibility admission Physiotherapy", "Admission Physiotherapy", "Admission Criteria Physio", "Admissions Criteria Physio",
+                  "Requirements admission Physio", "Requirement admission Physio", "Eligibility admission Physio", "Admission Physio"],
+     "responses": ["The admission eligibility for Physiotherapy is #Eligibility#"],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Fees",
+     "patterns": ["fees Physiotherapy", "pay Physiotherapy tuition", "fees Physio", "pay Physio tuition"],
+     "responses": ["The tuition fees for Physiotherapy is #Fees#. For more information about MQ fees contact administration. Person named #contact_name#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Timing",
+     "patterns": ["Timing Physiotherapy", "Time slot Physiotherapy", "duration Timings Physiotherapy", "Regular timings Physiotherapy", "time Physiotherapy", "start time Physiotherapy", "end time Physiotherapy",
+                  "Timing Physio", "Time slot Physio", "duration Timings Physio", "Regular timings Physio", "time Physio", "start time Physio", "end time Physio"],
+     "responses": ["The timing for Physiotherapy is #Timing#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_University",
+     "patterns": ["Physiotherapy university college", "Physiotherapy university affiliated", "Physiotherapy college affiliated", "Physio university college", "Physio university affiliated", "Physio college affiliated"],
+     "responses": ["Our Physiotherapy institute is affiliated by #University#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Master_program",
+     "patterns": ["Master Physiotherapy", "Master degree Physiotherapy", "Master program Physiotherapy", "Master Physio", "Master degree Physio", "Master program Physio"],
+     "responses": ["In Physiotherapy, #Master#"],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "PY_Result",
+     "patterns": ["result Physiotherapy", "results Physiotherapy", "grade Physiotherapy", "grades Physiotherapy",
+                  "result Physio", "results Physio", "grade Physio", "grades Physio"],
+     "responses": ["In Physiotherapy department, last year topper result was #Top_Result# and average result was #Avg_Result#."],
+     "context": "Physiotherapy"
+    },
+
+    {"tag": "course",
+     "patterns": ["courses", "fields"],
+     "responses": ["We offer Engineering courses, Pharmacy and Physiotherapy"],
+     "context": ""
+    },
+
+    {"tag": "BE",
+     "patterns": ["bachelor engineering", "fields engineering", "BE", "engineering", "engineering courses"],
+     "responses": ["We offer Mechanical engineering, Computer engineering, Electrical engineering, Civil engineering and Electronic Communication engineering."],
+     "context": ""
+    },
+
+    {"tag": "Name",
+     "patterns": ["name", "who you"],
+     "responses": ["My name is BitBot", "I am BitBot"],
+     "context": ""
+    },
+
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hello", "Good day"],
+     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there"],
+     "context": ""
+    },
+
+    {"tag": "Good_Morning",
+     "patterns": ["Good Morning", "goodmorning"],
+     "responses": ["Hello, Good Morning"],
+     "context": ""
+    },
+
+    {"tag": "Good_Afternoon",
+     "patterns": ["Good Afternoon", "goodafternoon"],
+     "responses": ["Hello, Good Afternoon"],
+     "context": ""
+    },
+
+    {"tag": "Good_Evening",
+     "patterns": ["Good Evening", "goodevening"],
+     "responses": ["Hello, Good Evening"],
+     "context": ""
+    },
+
+    {"tag": "Good_Night",
+     "patterns": ["Good Night", "goodnight"],
+     "responses": ["Good Night. Sweet Dreams."],
+     "context": ""
+    },
+
+    {"tag": "goodbye",
+     "patterns": ["Bye", "Goodbye"],
+     "responses": ["See you later.", "Have a nice day.", "Bye! Come back again soon."],
+     "context": ""
+    },
+
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That helpful"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure."],
+     "context": ""
+    },
+
+    {"tag": "MadeBy",
+     "patterns": ["who created you", "who made you", "who maker"],
+     "responses": ["Team Yard made me. Abhishek Jain, Dhruvi Rajput, Ravi Patel, Yash Shah"],
+     "context": ""
+    },
+
+    {"tag": "help",
+     "patterns": ["Help"],
+     "responses": ["You can ask me about departments."],
+     "context": ""
+    },
+
+    {"tag": "Unknown",
+     "patterns": [""],
+     "responses": ["I unable to get it. Try different."],
+     "context": ""
+    }
+   ]
+}
+   

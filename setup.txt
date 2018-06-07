@@ -1,0 +1,11 @@
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+
+
+    {"tag": "Change_department",
+     "patterns": ["change department", "changing department", "change computer", "changing computer", "change mechanical", "changing mechanical",
+                  "change electrical", "changing electrical", "change civil", "changing civil", "change electronics", "changing electronics", "change electronic", "changing electronic"],
+     "responses": ["It depend on the availability of seats in that department and also on Administration."],
+     "context": "Administration"
+    },

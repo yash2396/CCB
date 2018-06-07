@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | BitBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link  rel="icon"  href="../static/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/materialize.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/dashboard_css.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../static/javascript/jquery.min.js"></script>
+    <script src="../static/javascript/materialize.min.js"></script>
+    <script src="../static/javascript/md5.js"></script>
+    <script src="../static/javascript/dashboard.js"></script>
+
+</head>
+
+<body class="grey lighten-4" onload="load_animation('#{{ role }}');">
+
+     <div class="navbar-fixed">
+          <nav class="white">
+            <div class="nav-wrapper">
+              <a class="brand-logo center blue-grey-text text-darken-2">BitBot</a>
+              <a data-activates="mobile-demo" class="button-collapse" style="cursor: pointer">
+                  <i class="material-icons blue-grey-text text-darken-2">menu</i>
+              </a>
+
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn-large red accent-3">logout</a></li>
+              </ul>
+
+              <ul class="side-nav fixed" id="mobile-demo">
+                <li> <a class="brand-logo center m-dashboard-logo blue-grey-text text-darken-2">{{ role | replace('_', " ") }}</a></li>
+
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Departments</a></li>
+                  {% for department_list in res['res'] %}
+                <li id="{{ department_list['role']['department'] }}-li" class=" {% if role == department_list['role']['department'] %} active {% endif %}">
+                    <a href="#{{ department_list['role']['department'] }}" class="truncate" onclick="tab_link(this, {% if role == "Administration" %} true {% else %} false {% endif %})">
+                        {{ department_list['role']['department'] | replace('_', " ") }}
+                    </a>
+                </li>
+                  {% endfor %}
+
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Manage Account</a></li>
+                    {% if role == "Administration" %}
+                <li id="email-li"><a href="#change-email" onclick="change_email()">Change E-Mail Address</a></li>
+                    {% endif %}
+                <li id="password-li"><a href="#change-password" onclick="change_password({% if role == "Administration" %} true {% else %} false {% endif %})">Change your Password</a></li>
+
+                <li><a href="{{ url_for('logout') }}" id="logout" class="waves-effect waves-light btn-large red accent-3" style="display: none">logout</a></li>
+              </ul>
+            </div>
+          </nav>
+     </div>
+
+     <main>
+         {% for department in res['res'] %}
+             <div id="{{ department['role']['department'] }}" class="hide-fix" style="display: {% if role == department['role']['department'] %}block {% else %} None {% endif %};">
+                <div id="{{ department['role']['department'] }}-height"></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m4">
+                          <div class="card dashboard-main-card light-green darken-2 success-response" style="margin-top: 35px;">
+                            <div class="card-content white-text">
+                              <span class="card-title">
+                                  <i class="small material-icons white-text left">&#xE876;</i>
+                                  SUCCESS RESPONSES
+                              </span>
+                              <h3 class="center-align count">{{ department['role']['success_response'] }}</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m4">
+                          <div class="card dashboard-main-card yellow darken-2 total-response" style="margin-top: 35px;">
+                            <div class="card-content white-text">
+                              <span class="card-title">
+                                  <i class="small material-icons white-text left">&#xE8AF;</i>
+                                  Total RESPONSES
+                              </span>
+                              <h3 class="center-align count">{{ department['role']['total_responses'] }}</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m4">
+                          <div class="card dashboard-main-card blue darken-2 color-code" style="margin-top: 35px;">
+                            <div class="card-content white-text">
+                              <span class="card-title">
+                                  <i class="small material-icons white-text left">&#xE88F;</i>
+                                  COLOR CODE
+                              </span>
+                              <h4 class="blue-grey-text text-darken-2 fix-card">
+                                  <span class="chip">Fixed</span>
+                                  <span class="chip lime lighten-1">Editable</span>
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                          <div class="card dashboard-main-card main-card">
+                            <div class="card-content">
+                              <span class="card-title">
+                                  <i class="small material-icons left">&#xE896;</i>
+                                  LIST OF RESPONSES
+                              </span>
+
+                              <ul id="{{ department['role']['department'] }}-list" class="list-response">
+
+                                  {% for responses in department['role']['responses'] %}
+
+                                    <li onclick="open_modal('#modal-{{ responses['main_tag'] }}')" class="parent valign-wrapper grey-text text-darken-3 modal-trigger tooltipped" data-position="right" data-delay="10" data-tooltip="Click to edit">
+                                        <i class="material-icons edit-icon left">&#xE254;</i>
+                                        <span>{{ responses['response_edit'] | safe }}</span>
+                                    </li>
+                                          <!-- Modal Structure -->
+                                          <div id="modal-{{ responses['main_tag'] }}" class="modal">
+                                            <div class="modal-content">
+                                              <h4>
+                                                  <i class="small material-icons left">&#xE254;</i>
+                                                  EDIT DATA
+                                                  <a class="modal-close red waves-effect waves-light btn-floating fixed"><i class="material-icons">&#xE5CD;</i></a>
+                                              </h4>
+                                                <div class="container">
+                                                  <table class="bordered" style="margin-top: 30px">
+                                                      <thead><tr></tr></thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>CURRENT:</td>
+                                                        <td>
+                                                            <span>{{ responses['response_edited_modal'] | safe }}</span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>OUTPUT:</td>
+                                                        <td>
+                                                            <span>{{ responses['response_edit_modal'] | safe }}</span>
+                                                        </td>
+                                                      </tr>
+
+                                                      {% for tag in responses['tags'] %}
+                                                          <tr>
+                                                            <td>INPUT {{ tag }}:</td>
+                                                            <td>
+                                                                <div class="input-field">
+                                                                    <input name="{{ department['role']['department'] }}" type="hidden" value="{{ department['role']['department'] }}">
+                                                                    <input name="{{ tag }}" type="hidden" value="{{ tag }}">
+                                                                    <input id="input-{{ department['role']['department'] }}-{{ tag }}" type="text" oninput='editable("{{ department['role']['department'] }}-{{ tag }}")'>
+                                                                    <label for="input-{{ department['role']['department'] }}-{{ tag }}">Enter the text</label>
+                                                                </div>
+                                                            </td>
+                                                          </tr>
+                                                      {% endfor %}
+
+                                                    </tbody>
+                                                  </table>
+
+                                                  <div class="center-align" style="margin-top: 20px">
+                                                      <span id="error-{{ department['role']['department'] }}-{{ responses['main_tag'] }}" class="red-text"></span>
+                                                      <br />
+                                                      <a class="btn-large waves-effect waves-light" id="btn-{{ department['role']['department'] }}-{{ responses['main_tag'] }}"
+                                                         onclick='submit_data("{{ department['role']['department'] }}", {{ responses['tags'] }}, "{{ responses['main_tag'] }}")'>
+                                                          Update
+                                                          <i  id="load-{{ department['role']['department'] }}-{{ responses['main_tag'] }}" class="material-icons right" style="display:none;">&#xE5D5;</i>
+                                                      </a>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                          </div>
+
+                                    {% endfor %}
+                              </ul>
+
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         {% endfor %}
+
+        {% if role == "Administration" %}
+        <div id="change-email" style="display: none">
+            <div id="email-height"></div>
+
+            <script type="text/javascript">
+
+                function change_email() {
+                    $("#email-height").css("height", "54px");
+
+                    $(".side-nav li.active").removeClass("active");
+                    $("#email-li").addClass("active");
+
+                    $(".hide-fix").css("display","none");
+                    $("#change-password").css("display","none");
+                    document.getElementById('change-email').style.display = "block";
+
+                    $("#email-card").css("opacity","0");
+                    Materialize.fadeInImage('#email-card');
+                }
+
+                function update_email() {
+                    var email_check = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+                    var department = document.getElementById('email-department').value;
+                    var email = document.getElementById('email').value;
+
+                    if(department === "" || email === ""){
+                        document.getElementById('error-email').innerHTML = "Please fill all before clicking on update button.";
+                        return false;
+                    }
+                    else if (!email_check.test(email)){
+                        document.getElementById('error-email').innerHTML = "Please enter the correct email address before clicking on update button.";
+                    }
+                    else {
+                        $('#btn-email').addClass("disabled");
+                        $('#load-email').addClass(" loading-btn");
+
+                        $.ajax({
+                                type: "POST",
+                                url: "/update-email",
+                                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                                data: 'department=' + department + "&email=" + email,
+                                success: function (data) {
+                                    Materialize.toast(data, 8000, 'light-green');
+                                    document.getElementById('email-department').value = "";
+                                    document.getElementById('email').value = "";
+
+                                    $('#email').blur();
+
+                                    var disabled = $("#disabled-email");
+                                    var select_department_email = $("#email-department");
+                                    disabled.prop("disabled", false);
+                                    select_department_email.find('option[value=""]').prop('selected', true);
+                                    disabled.prop("disabled", true);
+                                    select_department_email.material_select();
+
+                                    document.getElementById('error-email').innerHTML = "";
+                                },
+                                error: function () {
+                                    Materialize.toast("Failed to Update or this mail id is already exists.", 8000, 'red');
+                                }
+                        });
+
+                        $('#btn-email').removeClass("disabled");
+                        $('#load-email').removeClass(" loading-btn");
+                    }
+                }
+
+            </script>
+
+            <div id="email-card" class="container">
+                <div class="row">
+                    <div class="col s12">
+                      <div class="card dashboard-main-card" style="padding: 30px">
+                        <div class="card-content">
+                          <span class="card-title"><i class="small material-icons left">&#xE0E1;</i>Change Email Address</span>
+                        <div class="row"></div>
+                          <div class="row">
+                            <div class="input-field col s6">
+                                <select id="email-department">
+                                  <option id="disabled-email" value="" disabled selected>Choose your option</option>
+                                    {% for department_list in res['res'] %}
+                                        <option value="{{ department_list['role']['department'] }}">{{ department_list['role']['department'] | replace('_', " ") }}</option>
+                                    {% endfor %}
+                                </select>
+                                <label>Select Department</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s8">
+                              <input id="email" type="email">
+                              <label for="email">Enter new Email id</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="center-align account-btn-container">
+                                  <span id="error-email" class="red-text"></span><br/>
+                                  <br />
+                                  <a class="btn-large waves-effect waves-light" id="btn-email" onclick='update_email()'>
+                                      Update
+                                      <i id="load-email" class="material-icons right" style="display:none;">&#xE5D5;</i>
+                                  </a>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endif %}
+
+
+        <div id="change-password" style="display: none">
+            <div id="password-height"></div>
+
+            <div id="password-card" class="container">
+                <div class="row">
+                    <div class="col s12">
+                      <div class="card dashboard-main-card" style="padding: 30px">
+                        <div class="card-content">
+                          <span class="card-title"><i class="small material-icons left">&#xE899;</i>Change Password</span>
+                        <div class="row">
+                            <input id="password-role" type="hidden" value="{{ role }}">
+                        </div>
+                          <div class="row">
+                            <div class="input-field col s8">
+                              <input id="password" type="password">
+                              <label for="password">Enter old Password</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s8">
+                              <input id="password1" type="password">
+                              <label for="password1">Enter new Password</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s8">
+                              <input id="password2" type="password">
+                              <label for="password2">Confirm Password</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="center-align account-btn-container">
+                              <span id="error-password" class="red-text"></span><br/>
+                              <br />
+                              <a class="btn-large waves-effect waves-light" id="btn-password" onclick='update_password()'>
+                                  Update
+                                  <i id="load-password" class="material-icons right" style="display:none;">&#xE5D5;</i>
+                              </a>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </main>
+
+      <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <h5 class="white-text">ABOUT</h5>
+                <p class="grey-text text-lighten-4" style="text-align: justify;">
+                    <b>BitBot</b> is a Chat bot for admission inquiry for BITS Edu Campus. It is built by YARD team under the guidance of
+                    <b>Dr. Avani Vasant,</b> Head of Computer Science and Engineering Department and Co-Guide <b>Prof. Parth Goel</b>,
+					Professor of Computer Science and Engineering Department. <b>YARD</b> team consist of 4 members, Final year students of
+                    BITS Edu Campus. Namely, <b>Abhishek Jain</b>, <b>Dhruvi Rajput</b>, <b>Ravi Patel</b> and <b>Yash Shah</b>.
+					<b>YARD</b> stands for Y Artificial Research and Development, where Y is denoted to the Y combinator,
+					a company based on chat bot. And also for Yash Abhishek Ravi Dhruvi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 YARD
+            <a class="grey-text text-lighten-4 right">Build 2018.04.18</a>
+            </div>
+          </div>
+      </footer>
+
+</body>
+</html>

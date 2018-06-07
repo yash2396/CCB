@@ -1,0 +1,317 @@
+<html>
+
+	<head>
+		<title>BitBot</title>
+
+		<link  rel="icon"  href="{{ url_for('static',filename='favicon.ico') }}"  type="image/x-icon">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/css_file.css') }}" type="text/css">
+
+		<script src="{{ url_for('static',filename='javascript/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='javascript/jquery-3.2.1.min.js') }}"></script>
+
+
+		<script>
+			$(window).bind("load", function(){
+				$('#loader').fadeOut(2000);
+			});
+		</script>
+
+		<script type="text/javascript">
+
+	        $(document).ready(function() {
+
+	            $(document).bind('keydown', function(event) {
+	                if (event.keyCode === 17) {
+	                    event.preventDefault();
+	                    window.location.reload(true);
+	                }
+	            });
+
+	            $("#input_message").keypress(function(event) {
+	                if (event.which === 13) {
+	                    event.preventDefault();
+	                    send();
+	                }
+	            });
+
+	            $("#rec").click(function(event) {
+	                switchRecognition();
+	            });
+	            $(document).mousedown(function(event) {
+	                if (event.which === 3) {
+	                    event.preventDefault();
+	                    switchRecognition();
+	                }
+	            });
+	            document.addEventListener("contextmenu", function (e) {
+                    e.preventDefault();
+                }, false);
+
+                const welcome_1 = "Welcome TO BITS EDU CAMPUS ";
+                const welcome_2 = "Hi, I am BitBot. ";
+                const welcome_3 = "I'm here to help you in admission inquiry  process. ";
+                const welcome_4 = "You can ask me questions about that. ";
+                const welcome_5 = "So, how can I help you. ";
+
+                const welcome_html = "<b>" + welcome_1 + "</b>";
+                var audio = new Audio("{{ url_for('static',filename='speech_files/wel.mp3') }}");
+                audio.play();
+
+                setResponse(welcome_html);
+                setResponse(welcome_2);
+                setResponse(welcome_3);
+                setResponse(welcome_4);
+                setResponse(welcome_5);
+                $('#input_message').focus();
+	        });
+
+	        var recognition;
+	        var selected_language;
+
+	        function changeLanguage(selected_language_param){
+	        	selected_language = selected_language_param;
+
+	        	$.ajax({
+	        		type: "POST",
+					url:  'http://127.0.0.1:5000/lang',
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+					dataType: 'json',
+					data: "selected_language=" + selected_language,
+					success: function (language) {
+						$('#modal-lang').fadeOut(500);
+			    		$('#language_header').html(language.language_header);
+			    		$('#info-text').html(language.info_text);
+			    		$('#mind-text').html(language.mind_text);
+			    		$('#voice-text').html(language.voice_text);
+			    		$('#cancel-text').html(language.cancel_text);
+			    		$('#voice-tryAgain-text').html(language.voice_tryAgain_text);
+			    		$('#voice-not-text').html(language.voice_not_text);
+			    		$('#input-error').html(language.input_error);
+			    		$('#voice_text').html(language.voice_tooltip);
+			    		$('#send-tooltip').html(language.send_tooltip);
+			    		$('#input_message').attr("placeholder", language.input_placeholder_text).focus();
+
+			    		if (selected_language.localeCompare("en-US") !== 0){
+			    		    document.getElementById('input_bar').style.display = "none";
+			    		    document.getElementById('rec').classList.add("btn-center");
+                        }
+
+					},
+					error: function () {}
+				});
+	        }
+
+	        function startRecognition() {
+	            recognition = new webkitSpeechRecognition();
+	            recognition.onstart = function(event) {
+	                updateRec();
+	            };
+	            recognition.onresult = function(event) {
+	                var text = "";
+	                for (var i = event.resultIndex; i < event.results.length; ++i) {
+	                    text += event.results[i][0].transcript;
+	                }
+
+                    setInput(text);
+	                stopRecognition();
+	            };
+	            recognition.onend = function() {
+	                stopRecognition();
+	            };
+	            recognition.onerror = function(event) {
+	            	document.getElementById('modal-voice-error').style.display = "block";
+	            	setTimeout(function(){
+                        document.getElementById('modal-voice-error').style.display = "none";
+                    }, 4000);
+	            };
+	            recognition.lang = selected_language;
+	            recognition.start();
+	        }
+
+	        function stopRecognition() {
+	            if (recognition) {
+	                recognition.stop();
+	                recognition = null;
+	            }
+	            updateRec();
+	        }
+
+	        function switchRecognition() {
+	            if (recognition) {
+	                stopRecognition();
+	            } else {
+	                startRecognition();
+	            }
+	        }
+
+	        function setInput(text) {
+                $("#input_message").val(text);
+	            send();
+	        }
+
+	        function updateRec() {
+	            if (recognition) {
+	                document.getElementById('rec').classList.remove("mic");
+	                document.getElementById('modal-voice').style.display = "block";
+	                document.getElementById('rec-icon').classList.add('close');
+	            }
+	            else {
+	                document.getElementById('rec').classList.remove("close");
+	                $('#modal-voice').fadeOut(500);
+	                document.getElementById('modal-voice').style.display = "none";
+	                document.getElementById('rec-icon').classList.add('mic');
+	            }
+	        }
+
+	        function send() {
+	            document.getElementById('modal-mind').style.display = "block";
+	            var text = $("#input_message").val();
+	            document.getElementById('input_message').value = "";
+
+	            if (text === ""){
+					document.getElementById('input-error').style.display = "block";
+					$('#modal-mind').fadeOut(500);
+	                document.getElementById('modal-mind').style.display = "none";
+				}
+				else {
+	                document.getElementById('input-error').style.display = "none";
+	                setRequest(text);
+
+	                var userID = "123";
+	                var send_data = "input_message=" + text + "&userID=" + userID + "&selected_language=" + selected_language;
+
+	                $.ajax({
+	                    type: "POST",
+	                    url: "http://127.0.0.1:5000/response",
+	                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                        dataType: 'json',
+	                    data: send_data,
+	                    success: function (data) {
+	                        $('#modal-mind').fadeOut(500);
+	                        document.getElementById('modal-mind').style.display = "none";
+
+	                        var audio = new Audio("http://127.0.0.1:5000/tts?filename=" + data.filename);
+                            audio.play();
+
+                            {#var msg = new SpeechSynthesisUtterance(data);#}
+                            {#msg.volume = 1;#}
+							{#msg.lang = selected_language;#}
+							{#window.speechSynthesis.speak(msg);#}
+
+	                        setResponse(data.message);
+	                        $('#input_message').focus();
+	                    },
+	                    error: function () {
+	                        var val = "<b>Unable to connect internet. Please connect and Try again.</b>";
+	                        var template = "<div class='row'><div class='message message-bot message-error'>" + val + "</div></div>";
+	                        $(".chat-window").append(template);
+	                        $('.chat-window').scrollTop($('.chat-window')[0].scrollHeight);
+	                        $('#modal-mind').fadeOut(500);
+	                        document.getElementById('modal-mind').style.display = "none";
+	                        $('#input_message').focus();
+	                    }
+	                });
+	            }
+	        }
+
+	        function setRequest(val) {
+	            var template = "<div class='row'><div class='message message-user'>" + val + "</div></div>";
+	            $(".chat-window").append(template);
+	            $('.chat-window').scrollTop($('.chat-window')[0].scrollHeight);
+	        }
+
+	        function setResponse(val) {
+	            setTimeout(function(){
+                    console.log("");
+                }, 2000);
+
+	            var template = "<div class='row'><div class='message message-bot'>" + val + "</div></div>";
+	            $(".chat-window").append(template);
+	            $('.chat-window').scrollTop($('.chat-window')[0].scrollHeight);
+	        }
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="loader"></div>
+
+		<div class="box-body">
+
+			<div class="left-col">
+				<div class="logo-header">
+					<img class="logo-img" src="../static/images/Bits.jpg">
+				</div>
+
+				<div class="logo-text">
+					<a>BitBot <a class="small"> by YARD</a></a>
+				</div>
+
+				<div class="vertical-line"></div>
+				<div id="info-text" class="info">
+					<b>BitBot</b> is a Chat bot for admission inquiry for BITS Edu Campus.<br/><br/> It is built by YARD team
+					under the guidance of <b>Dr. Avani Vasant,</b> Head of Computer Science and Engineering Department and Co-Guide <b>Prof. Parth Goel</b>,
+					Professor of Computer Science and Engineering Department. <br/><br/>
+					<b>YARD</b> team consist of 4 members, Final year students of BITS Edu Campus. Namely, <b>Abhishek Jain</b>,
+					<b>Dhruvi Rajput</b>, <b>Ravi Patel</b> and <b>Yash Shah</b>.<br/><br/>
+					<b>YARD</b> stands for Y Artificial Research and Development, where Y is denoted to the Y combinator,
+					a company based on chat bot. <br/><br/> And also for Yash Abhishek Ravi Dhruvi.
+				</div>
+				<div class="vertical-line vertical-line-bottom"></div>
+			</div>
+
+			<div class="right-col">
+				<div class="right-box-header">
+					<span id="language_header">Selected Language: </span>
+					<a href="/bitbot" class="small lang-header-small">(change the language)</a>
+				</div>
+
+				<div class="modal" id="modal-lang">
+					<div class="modal-content modal-lang">
+						<div class="modal-lang-header">अपनी भाषा का चयन करें<br>Select your language<br>તમારી ભાષા પસંદ કરો</div>
+						<div class="modal-btn-lang" onclick="changeLanguage('hi-IN')">हिंदी</div>
+						<div class="modal-btn-lang" onclick="changeLanguage('en-US')">English</div>
+						<div class="modal-btn-lang" onclick="changeLanguage('gu-IN')">ગુજરાતી</div>
+					</div>
+				</div>
+
+				<div class="modal" id="modal-mind">
+					<div class="modal-content modal-icon mind-icon">
+						<span id="mind-text" class="modal-text">Thinking...</span>
+					</div>
+				</div>
+
+				<div class="modal" id="modal-voice">
+					<div class="modal-content modal-icon voice-icon" onclick="stopRecognition()">
+						<span id="voice-text" class="modal-text">Listening...</span>
+						<span id="cancel-text" class="modal-text cancel-text">Click to cancel.</span>
+					</div>
+				</div>
+
+				<div class="modal" id="modal-voice-error">
+					<div class="modal-content modal-icon voice-error-icon">
+						<span id="voice-tryAgain-text" class="modal-text">Try again.</span>
+						<span id="voice-not-text" class="modal-text cancel-text">Voice Problem.</span>
+					</div>
+				</div>
+
+				<div class="chat-window"></div>
+
+				<div class="input-area-box">
+					<span class="tooltip input-span" id="input_bar">
+						<input id="input_message" type="text" placeholder="Enter your query Here..." autocomplete="false"/>
+						<span id="input-error" class="input-error">Please enter your query here or voice search.</span>
+					    <a class="btn send tooltip" onclick="send()"><span id="send-tooltip" class="tooltiptext">send</span></a>
+					</span>
+
+                    <a class="btn mic-btn" id="rec"><span id="voice_text">Voice Input</span> <span id="rec-icon" class="icon-btn mic"></span></a>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>

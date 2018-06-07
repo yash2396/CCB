@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+
+	        $(document).ready(function() {
+	            startRecognition();
+            });
+
+	        var recognition;
+
+	        function startRecognition() {
+	            recognition = new webkitSpeechRecognition();
+	            recognition.continuous = true;
+                recognition.interimResults = true;
+	            recognition.onstart = function(event) {};
+	            recognition.onresult = function(event) {
+	                var text = "";
+	                for (var i = event.resultIndex; i < event.results.length; ++i) {
+	                    text += event.results[i][0].transcript;
+	                }
+			        document.getElementById("text").innerHTML = text;
+	                // stopRecognition();
+	            };
+	            recognition.onend = function() {
+	                // stopRecognition();
+	            };
+	            recognition.onerror = function(event) {};
+	            recognition.lang = 'en-US';
+	            recognition.start();
+	        }
+
+	        function stopRecognition() {
+	            if (recognition) {
+	                recognition.stop();
+	                recognition = null;
+	            }
+	        }
+
+		</script>
+
+</head>
+
+
+<body>
+<div>
+	<p id="text"></p>
+</div>
+</body>
+
+</html>

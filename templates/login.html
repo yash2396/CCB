@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | BitBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link  rel="icon"  href="../static/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/materialize.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/dashboard_css.css" type="text/css">
+
+    <script src="../static/javascript/jquery.min.js"></script>
+    <script src="../static/javascript/materialize.min.js"></script>
+    <script src="../static/javascript/md5.js"></script>
+
+    <script type="text/javascript">
+        function validateLoginForm() {
+            var username = document.forms["login_form"]["username"].value;
+            var password = document.forms["login_form"]["password"].value;
+            if (username === "" || password === "") {
+                document.getElementById("empty-login").style.display = "inline-block";
+                return false;
+            }
+            else {
+                document.getElementById('empty-login').style.display = "none";
+                document.forms['login_form']['password'].value = MD5(password);
+                return true;
+            }
+        }
+        function validateForgotForm() {
+            var username = document.forms["forgot_form"]["username"].value;
+            if (username === "") {
+                document.getElementById("empty-forgot").style.display = "inline-block";
+                return false;
+            }
+        }
+    </script>
+
+    {% if error %}
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    Materialize.toast('{{ error }}', 8000, '{{ alert_color }}');
+                });
+        </script>
+    {% endif %}
+
+</head>
+<body class="blue-gradient">
+
+    <div class="container">
+
+      <div class="card login-card">
+        <div class="card-content">
+
+          <div class="logo-header">
+		    <img class="logo-img" src="../static/images/Bits.jpg">
+            <div class="horizontal-line"></div>
+            <a class="bit">BitBot<a class="small">by YARD</a></a>
+          </div>
+
+        </div>
+
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a class="active" href="#login">Login</a></li>
+            <li class="tab"><a href="#forgot">Forgot Password</a></li>
+          </ul>
+        </div>
+
+
+        <div class="card-content grey lighten-4">
+
+            <div class="container" id="login">
+                <form action="/" method="post" id="login_form" onsubmit="return validateLoginForm()">
+
+                    <input type="hidden" name="flag" value="login">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" name="username" autofocus>
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p id="empty-login" class="alert red-text">Please Enter the Username and Password.</p>
+                        <button type="submit" onsubmit="return validateLoginForm()" class="waves-effect waves-light btn right">Login</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container"  id="forgot">
+                <form action="/" method="post" id="forgot_form" onsubmit="return validateForgotForm()">
+
+                    <input type="hidden" name="flag" value="forgot">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username-1" type="text" name="username">
+                            <label for="username-1">Username</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p id="empty-forgot" class="alert red-text">Please Enter the Username.</p>
+                        <button type="submit" onsubmit="return validateLoginForm()" class="waves-effect waves-light btn right">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container center-align grey-text text-lighten-2">
+            <br />
+            © 2018 YARD | Build 2018.2.10
+        </div>
+      </div>
+
+    </div>
+
+</body>
+</html>

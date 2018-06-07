@@ -1,0 +1,13 @@
+{ 
+    "language_header": "Selected Language: English", 
+    "info_text": "<b>BitBot</b> is a Chat bot for admission inquiry for BITS Edu Campus.<br/><br/> It is built by YARD team under the guidance of <b>Dr. Avani Vasant,</b> Head of Computer Science and Engineering Department and Co-Guide <b>Prof. Parth Goel</b>, Professor of Computer Science and Engineering Department. <br/><br/><b>YARD</b> team consist of 4 members, Final year students of BITS Edu Campus. Namely, <b>Abhishek Jain</b>, <b>Dhruvi Rajput</b>, <b>Ravi Patel</b> and <b>Yash Shah</b>.<br/><br/><b>YARD</b> stands for Y Artificial Research and Development, where Y is denoted to the Y combinator, a company based on chat bot. <br/><br/> And also for Yash Abhishek Ravi Dhruvi.",
+	"mind_text": "Thinking...",
+	"voice_text": "Listening...",
+	"cancel_text": "Click to cancel.",
+	"voice_tryAgain_text": "Try again.",
+	"voice_not_text": "Voice problem.",
+	"input_placeholder_text": "Enter your query Here...",
+	"input_error": "Please enter your query here or voice search.",
+	"voice_tooltip": "Voice Input",
+	"send_tooltip": "send"
+}
